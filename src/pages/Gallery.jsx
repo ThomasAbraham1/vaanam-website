@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import ImageTextSection from '../components/ImageTextSection';
 
 import img001 from '../assets/gallery/001.webp';
@@ -38,9 +39,15 @@ export default function Gallery() {
        </section>
        
        {/* Hero Image */}
-       <div className="w-full max-w-[1920px] mx-auto">
+       <motion.div 
+         initial={{ opacity: 0, y: 50 }}
+         whileInView={{ opacity: 1, y: 0 }}
+         viewport={{ once: true, margin: "-100px" }}
+         transition={{ duration: 0.8 }}
+         className="w-full max-w-[1920px] mx-auto"
+       >
          <img src={img001} alt="Gallery Hero" className="w-full h-auto block" />
-       </div>
+       </motion.div>
 
        {/* Text 1 */}
        <ImageTextSection 
@@ -54,7 +61,13 @@ export default function Gallery() {
        />
 
        {/* Collage 1 (Asymmetric) */}
-       <div className="w-full max-w-[1600px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 px-6 pb-24">
+       <motion.div 
+         initial={{ opacity: 0, y: 50 }}
+         whileInView={{ opacity: 1, y: 0 }}
+         viewport={{ once: true, margin: "-100px" }}
+         transition={{ duration: 0.8 }}
+         className="w-full max-w-[1600px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 px-6 pb-24"
+       >
          <div className="h-full">
            <img src={img002} alt="Balcony relaxation" className="w-full h-full object-cover" />
          </div>
@@ -62,12 +75,18 @@ export default function Gallery() {
            <img src={img003} alt="Kitchen" className="w-full h-1/2 object-cover" />
            <img src={img004} alt="Bedroom" className="w-full h-1/2 object-cover" />
          </div>
-       </div>
+       </motion.div>
 
        {/* Full Width Balcony */}
-       <div className="w-full max-w-[1920px] mx-auto">
+       <motion.div 
+         initial={{ opacity: 0, y: 50 }}
+         whileInView={{ opacity: 1, y: 0 }}
+         viewport={{ once: true, margin: "-100px" }}
+         transition={{ duration: 0.8 }}
+         className="w-full max-w-[1920px] mx-auto"
+       >
          <img src={img005} alt="Balcony Sunset" className="w-full h-auto block" />
-       </div>
+       </motion.div>
 
        {/* Text 2 */}
        <ImageTextSection 
@@ -81,7 +100,13 @@ export default function Gallery() {
        />
 
        {/* Full width clubhouses & Asymmetrical Grid Block */}
-       <div className="w-full max-w-[1920px] mx-auto flex flex-col gap-2 md:gap-4 pb-24">
+       <motion.div 
+         initial={{ opacity: 0, y: 50 }}
+         whileInView={{ opacity: 1, y: 0 }}
+         viewport={{ once: true, margin: "-100px" }}
+         transition={{ duration: 0.8 }}
+         className="w-full max-w-[1920px] mx-auto flex flex-col gap-2 md:gap-4 pb-24"
+       >
          <img src={img006} alt="Round Clubhouse" className="w-full h-auto block" />
          <img src={img007} alt="Rectangular Clubhouse" className="w-full h-auto block" />
          
@@ -90,11 +115,11 @@ export default function Gallery() {
            <img src={img008} alt="Salon" className="w-full h-full object-cover md:col-span-2" />
            <img src={img009} alt="Kids Area" className="w-full h-full object-cover md:col-span-2" />
            <img src={img010} alt="Dining" className="w-full h-full object-cover md:col-span-1" />
-           <img src={img011} alt="Cinema" className="w-full h-full object-cover md:col-span-3" />
+           <img src={img011} alt="Cinema" className="w-full h-full object-cover md:col-span-2" />
          </div>
 
          <img src={img012} alt="Coworking space" className="w-full h-auto block" />
-       </div>
+       </motion.div>
 
        {/* Text 3 */}
        <ImageTextSection 
@@ -108,7 +133,13 @@ export default function Gallery() {
        />
 
        {/* Collage 2 (Asymmetric) */}
-       <div className="w-full max-w-[1600px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 px-6 pb-12">
+       <motion.div 
+         initial={{ opacity: 0, y: 50 }}
+         whileInView={{ opacity: 1, y: 0 }}
+         viewport={{ once: true, margin: "-100px" }}
+         transition={{ duration: 0.8 }}
+         className="w-full max-w-[1600px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 px-6 pb-12"
+       >
          <div className="h-full">
            <img src={img013} alt="Baby on grass" className="w-full h-full object-cover" />
          </div>
@@ -116,12 +147,18 @@ export default function Gallery() {
            <img src={img014} alt="Outdoor Stage" className="w-full h-1/2 object-cover" />
            <img src={img015} alt="Kids slide" className="w-full h-1/2 object-cover" />
          </div>
-       </div>
+       </motion.div>
 
        {/* Bottom Peeking Image */}
-       <div className="w-full max-w-[1920px] mx-auto pb-24">
+       <motion.div 
+         initial={{ opacity: 0, y: 50 }}
+         whileInView={{ opacity: 1, y: 0 }}
+         viewport={{ once: true, margin: "-100px" }}
+         transition={{ duration: 0.8 }}
+         className="w-full max-w-[1920px] mx-auto pb-24"
+       >
          <img src={img016} alt="Dining area" className="w-full h-auto block" />
-       </div>
+       </motion.div>
 
        {/* New Section (Upscaled additions) */}
        <ImageTextSection 
@@ -129,12 +166,18 @@ export default function Gallery() {
          titlePart2="Living Spaces"
          description="A closer look at the meticulously crafted interiors and community zones."
        />
-       <div className="w-full max-w-[1920px] mx-auto flex flex-col gap-0">
+       <motion.div 
+         initial={{ opacity: 0, y: 50 }}
+         whileInView={{ opacity: 1, y: 0 }}
+         viewport={{ once: true, margin: "-100px" }}
+         transition={{ duration: 0.8 }}
+         className="w-full max-w-[1920px] mx-auto flex flex-col gap-0 pb-24"
+       >
          <img src={new1} alt="New Space 1" className="w-full h-auto block" />
          <img src={new2} alt="New Space 2" className="w-full h-auto block" />
          <img src={new3} alt="New Space 3" className="w-full h-auto block" />
          <img src={new4} alt="New Space 4" className="w-full h-auto block" />
-       </div>
+       </motion.div>
     </div>
   );
 }
