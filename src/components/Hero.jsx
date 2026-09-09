@@ -14,8 +14,8 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="w-full lg:w-[45%] flex flex-col justify-center px-6 sm:px-12 md:px-16 lg:pl-10 lg:pr-6 py-8 md:py-12 lg:py-24 lg:self-center z-10"
         >
-          <div className="w-full max-w-2xl lg:ml-auto text-left">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.5rem] 2xl:text-8xl font-serif italic font-normal tracking-wide leading-[1.12] mb-5 md:mb-8">
+          <div className="w-full max-w-none md:max-w-3xl xl:max-w-4xl lg:ml-auto text-left">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.5rem] 2xl:text-7xl font-serif italic font-normal tracking-wide leading-[1.12] mb-5 md:mb-8">
               <span className="text-brand-orange block">Rooted in Green,</span>
               <span className="text-white block">Rising in Style.</span>
             </h1>
