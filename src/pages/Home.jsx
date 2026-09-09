@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Hero from '../components/Hero';
 import Stats from '../components/Stats';
 import ImageTextSection from '../components/ImageTextSection';
+import Amenities from '../components/Amenities';
 
 // All images mapped sequentially from 001 to 011
 import img001 from '../assets/images/001 Photo.webp';
@@ -99,6 +100,9 @@ export default function Home() {
       >
         <img src={img004} alt="Master Plan Map" className="w-full max-h-[85vh] object-contain block mx-auto" />
       </motion.div>
+
+      {/* Amenities Section */}
+      <Amenities />
 
       {/* Text 5 - T1&4 Floor plans */}
       <ImageTextSection 

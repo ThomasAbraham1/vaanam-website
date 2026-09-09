@@ -73,7 +73,7 @@ export default function Stats() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="grid grid-cols-2 gap-y-10 gap-x-8 md:gap-y-16 md:gap-x-20 lg:gap-x-32 pt-8 w-full max-w-8xl text-center"
+            className="grid grid-cols-2 gap-y-10 gap-x-8 md:gap-y-16 md:gap-x-20 lg:gap-x-24 pt-8 w-full max-w-8xl text-center"
           >
             <div className="flex flex-col items-center">
               <h3 className="text-3xl md:text-4xl lg:text-6xl font-normal text-brand-green mb-2 md:mb-3">7 Acre</h3>
