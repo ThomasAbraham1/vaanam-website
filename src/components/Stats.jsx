@@ -57,10 +57,10 @@ export default function Stats() {
         >
           <h2 className="text-4xl md:text-5xl font-serif font-normal mb-6 leading-tight tracking-wide">
             <span className="text-brand-green">A New Standard of</span><br/>
-            <span className="text-brand-orange italic">Care-led Living</span>
+            <span className="text-brand-orange italic">Care - led Living.</span>
           </h2>
           <p className="text-sm md:text-base leading-relaxed text-gray-600">
-            Ultimate Architects is an award-winning modern architecture firm based in New York. We specialize in contemporary design through our signature Natural Modern approach.
+            Minnaro Architects is an award-winning modern architecture firm based in New York. We specialize in contemporary design through our signature Natural Modern approach.
           </p>
         </motion.div>
 
@@ -105,23 +105,23 @@ export default function Stats() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-8 pt-8 border-t border-gray-200"
+          className="grid grid-cols-2 gap-y-16 gap-x-8 pt-16 max-w-2xl mx-auto"
         >
-          <div>
-            <h3 className="text-2xl md:text-3xl font-serif font-normal text-brand-green mb-2">7 Acre</h3>
-            <p className="text-xs text-gray-500 uppercase tracking-widest">Gated Community</p>
+          <div className="text-center">
+            <h3 className="text-3xl md:text-4xl font-sans font-medium text-brand-green mb-2">7 Acre</h3>
+            <p className="text-sm md:text-base text-gray-600">Gated Community</p>
           </div>
-          <div>
-            <h3 className="text-2xl md:text-3xl font-serif font-normal text-brand-green mb-2">4 Towers</h3>
-            <p className="text-xs text-gray-500 uppercase tracking-widest">G + 31 Floors</p>
+          <div className="text-center">
+            <h3 className="text-3xl md:text-4xl font-sans font-medium text-brand-green mb-2">4 Towers</h3>
+            <p className="text-sm md:text-base text-gray-600">G + 31 Floors</p>
           </div>
-          <div>
-            <h3 className="text-2xl md:text-3xl font-serif font-normal text-brand-green mb-2">2, 2.5 & 3</h3>
-            <p className="text-xs text-gray-500 uppercase tracking-widest">BHK Residences</p>
+          <div className="text-center">
+            <h3 className="text-3xl md:text-4xl font-sans font-medium text-brand-green mb-2">2, 2.5 & 3</h3>
+            <p className="text-sm md:text-base text-gray-600">BHK Residences</p>
           </div>
-          <div>
-            <h3 className="text-2xl md:text-3xl font-serif font-normal text-brand-green mb-2">1388-2515 <span className="text-lg">Sq.ft</span></h3>
-            <p className="text-xs text-gray-500 uppercase tracking-widest">Thoughtfully planned homes</p>
+          <div className="text-center">
+            <h3 className="text-3xl md:text-4xl font-sans font-medium text-brand-green mb-2">1388-2515 <span className="text-lg md:text-xl">Sq.ft</span></h3>
+            <p className="text-sm md:text-base text-gray-600">Thoughtfully planned homes</p>
           </div>
         </motion.div>
 
@@ -131,9 +131,9 @@ export default function Stats() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="mt-4 text-center"
+          className="mt-8 text-center"
         >
-          <p className="text-xs text-gray-400 uppercase tracking-[0.2em]">Bachupally, Hyderabad</p>
+          <p className="text-sm md:text-base text-gray-800">Bachupally, Hyderabad</p>
         </motion.div>
 
       </div>
