@@ -46,20 +46,20 @@ export default function Stats() {
     <>
       {/* TEXT SECTION */}
       <section className="bg-white pt-32 pb-12 md:pt-48 md:pb-24 px-6 sm:px-12 md:px-24 text-gray-800">
-        <div className="max-w-[1600px] mx-auto w-full">
+        <div className="max-w-[1600px] mx-auto w-full flex flex-col items-center text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
-            className="max-w-3xl"
+            className="max-w-6xl"
           >
-            <h2 className="text-3xl md:text-5xl font-serif font-normal mb-6 leading-tight tracking-wide">
+            <h2 className="text-3xl md:text-5xl font-serif italic font-normal mb-6 leading-tight tracking-wide">
               <span className="text-brand-green">A New Standard of </span>
-              <span className="text-brand-orange italic">Care-led Living</span>
+              <span className="text-brand-orange">Care-led Living</span>
             </h2>
-            <p className="text-sm md:text-xl leading-relaxed text-gray-600">
-              Ultimate Architects is an award-winning modern architecture firm based in New York. We specialize in contemporary design through our signature Natural Modern approach.
+            <p className="text-sm md:text-2xl leading-relaxed text-brand-green/90 font-medium">
+              Minnaro Architects is an award-winning modern architecture firm based in New York. We specialize in contemporary design through our signature Natural Modern approach.
             </p>
           </motion.div>
         </div>
@@ -77,19 +77,19 @@ export default function Stats() {
           >
             <div className="flex flex-col items-center">
               <h3 className="text-4xl md:text-6xl font-normal text-brand-green mb-3">7 Acre</h3>
-              <p className="text-base md:text-xl text-brand-green font-medium">Gated Community</p>
+              <p className="text-base md:text-2xl text-brand-green font-semibold">Gated Community</p>
             </div>
             <div className="flex flex-col items-center">
               <h3 className="text-4xl md:text-6xl font-normal text-brand-green mb-3">4 Towers</h3>
-              <p className="text-base md:text-xl text-brand-green font-medium">G + 31 Floors</p>
+              <p className="text-base md:text-2xl text-brand-green font-semibold">G + 31 Floors</p>
             </div>
             <div className="flex flex-col items-center">
               <h3 className="text-4xl md:text-6xl font-normal text-brand-green mb-3">2, 2.5 & 3</h3>
-              <p className="text-base md:text-xl text-brand-green font-medium">BHK Residences</p>
+              <p className="text-base md:text-2xl text-brand-green font-semibold">BHK Residences</p>
             </div>
             <div className="flex flex-col items-center">
               <h3 className="text-4xl md:text-6xl font-normal text-brand-green mb-3">1388-2515 <span className="text-2xl md:text-3xl">Sq.ft</span></h3>
-              <p className="text-base md:text-xl text-brand-green font-medium">Thoughtfully planned homes</p>
+              <p className="text-base md:text-2xl text-brand-green font-semibold">Thoughtfully planned homes</p>
             </div>
           </motion.div>
 
@@ -101,7 +101,7 @@ export default function Stats() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mt-20 text-center"
           >
-            <p className="text-base md:text-xl text-gray-800 font-medium">Bachupally, Hyderabad</p>
+            <p className="text-base md:text-xl text-gray-800 font-semibold">Bachupally, Hyderabad</p>
           </motion.div>
         </div>
       </section>

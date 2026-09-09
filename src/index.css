@@ -1,5 +1,54 @@
 @import "tailwindcss";
 
+/* Bozon Font Family */
+@font-face {
+  font-family: "Bozon";
+  src: url("./assets/fonts/Bozon-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bozon";
+  src: url("./assets/fonts/Bozon-Regular-Italic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bozon";
+  src: url("./assets/fonts/Bozon-Book.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bozon";
+  src: url("./assets/fonts/Bozon-Book-Italic.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bozon";
+  src: url("./assets/fonts/Bozon-Light.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bozon";
+  src: url("./assets/fonts/Bozon-DemiBold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
   --color-brand-green: #073E27;
   --color-brand-orange: #C79657;

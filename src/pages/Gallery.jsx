@@ -52,8 +52,8 @@ export default function Gallery() {
        {/* Text 1 */}
        <ImageTextSection 
          customTitle={
-           <h2 className="text-3xl md:text-5xl font-serif font-normal tracking-wide leading-tight mb-4">
-             <span className="text-brand-orange italic">The home </span>
+           <h2 className="text-3xl md:text-5xl font-serif italic font-normal tracking-wide leading-tight mb-4">
+             <span className="text-brand-orange">The home </span>
              <span className="text-brand-green">takes care of you</span>
            </h2>
          }
@@ -83,8 +83,8 @@ export default function Gallery() {
        {/* Text 2 */}
        <ImageTextSection 
          customTitle={
-           <h2 className="text-3xl md:text-5xl font-serif font-normal tracking-wide leading-tight mb-4">
-             <span className="text-brand-orange italic">Two Clubhouses. </span>
+           <h2 className="text-3xl md:text-5xl font-serif italic font-normal tracking-wide leading-tight mb-4">
+             <span className="text-brand-orange">Two Clubhouses. </span>
              <span className="text-brand-green">More ways to live well.</span>
            </h2>
          }
@@ -116,8 +116,8 @@ export default function Gallery() {
        {/* Text 3 */}
        <ImageTextSection 
          customTitle={
-           <h2 className="text-3xl md:text-5xl font-serif font-normal tracking-wide leading-tight mb-4">
-             <span className="text-brand-orange italic">Two Clubhouses. </span>
+           <h2 className="text-3xl md:text-5xl font-serif italic font-normal tracking-wide leading-tight mb-4">
+             <span className="text-brand-orange">Two Clubhouses. </span>
              <span className="text-brand-green">More ways to live well.</span>
            </h2>
          }
