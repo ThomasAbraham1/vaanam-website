@@ -95,7 +95,7 @@ export default function Home() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8 }}
-        className="w-full max-w-[1600px] mx-auto py-8 px-4 md:py-12 md:px-6"
+        className="w-full max-w-[1600px] mx-auto pt-8 pb-0 px-4 md:pt-12 md:pb-0 md:px-6 lg:py-12"
       >
         <img src={img004} alt="Master Plan Map" className="w-full max-h-[85vh] object-contain block mx-auto" />
       </motion.div>
@@ -108,17 +108,17 @@ export default function Home() {
       />
 
       {/* Image 5 - Outline Site Plan T1&4 */}
-      <div className="w-full max-w-[1600px] mx-auto h-auto px-4 pb-8 md:px-6 md:pb-12">
+      <div className="w-full max-w-[1600px] mx-auto h-auto px-4 pb-0 md:px-6 md:pb-0 lg:pb-12">
         <img src={img005} alt="Outline Site Plan Tower 1 and 4" className="w-full h-auto object-contain mx-auto max-w-4xl block" />
       </div>
 
       {/* Image 6 - Area Table T1&4 */}
-      <div className="w-full max-w-[1600px] mx-auto h-auto px-4 pb-8 md:px-6 md:pb-12">
+      <div className="w-full max-w-[1600px] mx-auto h-auto px-4 pb-0 md:px-6 md:pb-0 lg:pb-12">
         <img src={img006} alt="Area Table Tower 1 and 4" className="w-full h-auto object-contain mx-auto max-w-4xl block" />
       </div>
 
       {/* Image 7 - Floor Plan T1&4 */}
-      <div className="w-full max-w-[1600px] mx-auto h-auto px-6 pb-24">
+      <div className="w-full max-w-[1600px] mx-auto h-auto px-4 pb-0 md:px-6 md:pb-0 lg:pb-24">
         <img src={img007} alt="Detailed Floor Plan Tower 1 and 4" className="w-full h-auto object-contain mx-auto max-w-4xl block" />
       </div>
 
@@ -130,7 +130,7 @@ export default function Home() {
       />
 
       {/* Images 008 & 009 - Outline Site Plan T2&3 with Compass */}
-      <div className="w-full max-w-[1600px] mx-auto h-auto px-4 pb-8 md:px-6 md:pb-12">
+      <div className="w-full max-w-[1600px] mx-auto h-auto px-4 pb-0 md:px-6 md:pb-0 lg:pb-12">
         <div className="relative w-full max-w-4xl mx-auto">
           <img src={img008} alt="Outline Site Plan Tower 2 and 3" className="w-full h-auto object-contain block mx-auto" />
           <img src={img009} alt="Compass" className="absolute top-0 right-0 w-20 md:w-32 h-auto object-contain" />

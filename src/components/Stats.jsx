@@ -107,7 +107,7 @@ export default function Stats() {
       </section>
 
       {/* MEDIA SECTION */}
-      <section className="bg-white pb-16 md:pb-0 w-full">
+      <section className="bg-white pb-0 md:pb-0 w-full">
         <motion.div
           ref={containerRef}
           initial={{ opacity: 0, scale: 0.95 }}

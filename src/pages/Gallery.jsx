@@ -155,7 +155,7 @@ export default function Gallery() {
          whileInView={{ opacity: 1, y: 0 }}
          viewport={{ once: true, margin: "-100px" }}
          transition={{ duration: 0.8 }}
-         className="w-full max-w-[1920px] mx-auto flex flex-col gap-2 md:gap-4 pb-24"
+         className="w-full max-w-[1920px] mx-auto flex flex-col gap-2 md:gap-4 pb-0 lg:pb-24"
        >
          <img src={new1} alt="New Space 1" className="w-full max-h-[85vh] object-cover block" />
          <img src={new2} alt="New Space 2" className="w-full max-h-[85vh] object-cover block" />
