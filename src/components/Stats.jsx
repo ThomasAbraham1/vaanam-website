@@ -1,13 +1,12 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { motion, useInView } from 'framer-motion';
-import vanamVideo from '../assets/videos/vanam-compressed.mp4';
 
 export default function Stats() {
   const containerRef = useRef(null);
   const videoRef = useRef(null);
   const [showControls, setShowControls] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
-  
+
   // Only play video when it scrolls into view
   const isInView = useInView(containerRef, { margin: "0px" });
 
@@ -44,49 +43,93 @@ export default function Stats() {
   };
 
   return (
-    <section className="bg-white py-24 px-6 sm:px-12 md:px-24 text-gray-800">
-      <div className="max-w-[1600px] mx-auto flex flex-col gap-16 md:gap-24">
-        
-        {/* ROW 1: Text */}
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8 }}
-          className="max-w-3xl"
-        >
-          <h2 className="text-4xl md:text-5xl font-serif font-normal mb-6 leading-tight tracking-wide">
-            <span className="text-brand-green">A New Standard of</span><br/>
-            <span className="text-brand-orange italic">Care - led Living.</span>
-          </h2>
-          <p className="text-sm md:text-base leading-relaxed text-gray-600">
-            Minnaro Architects is an award-winning modern architecture firm based in New York. We specialize in contemporary design through our signature Natural Modern approach.
-          </p>
-        </motion.div>
+    <>
+      {/* TEXT SECTION */}
+      <section className="bg-white pt-32 pb-12 md:pt-48 md:pb-24 px-6 sm:px-12 md:px-24 text-gray-800">
+        <div className="max-w-[1600px] mx-auto w-full">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8 }}
+            className="max-w-3xl"
+          >
+            <h2 className="text-3xl md:text-5xl font-serif font-normal mb-6 leading-tight tracking-wide">
+              <span className="text-brand-green">A New Standard of </span>
+              <span className="text-brand-orange italic">Care-led Living</span>
+            </h2>
+            <p className="text-sm md:text-xl leading-relaxed text-gray-600">
+              Ultimate Architects is an award-winning modern architecture firm based in New York. We specialize in contemporary design through our signature Natural Modern approach.
+            </p>
+          </motion.div>
+        </div>
+      </section>
 
-        {/* ROW 2: Video */}
-        <motion.div 
+      {/* STATS SECTION */}
+      <section className="bg-white py-2 pb-32 md:pb-48 px-6 sm:px-12 md:px-24 text-gray-800">
+        <div className="max-w-[1600px] mx-auto w-full flex flex-col items-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="grid grid-cols-2 gap-y-16 gap-x-12 md:gap-x-32 pt-8 w-full max-w-8xl text-center"
+          >
+            <div className="flex flex-col items-center">
+              <h3 className="text-4xl md:text-6xl font-normal text-brand-green mb-3">7 Acre</h3>
+              <p className="text-base md:text-xl text-brand-green font-medium">Gated Community</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <h3 className="text-4xl md:text-6xl font-normal text-brand-green mb-3">4 Towers</h3>
+              <p className="text-base md:text-xl text-brand-green font-medium">G + 31 Floors</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <h3 className="text-4xl md:text-6xl font-normal text-brand-green mb-3">2, 2.5 & 3</h3>
+              <p className="text-base md:text-xl text-brand-green font-medium">BHK Residences</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <h3 className="text-4xl md:text-6xl font-normal text-brand-green mb-3">1388-2515 <span className="text-2xl md:text-3xl">Sq.ft</span></h3>
+              <p className="text-base md:text-xl text-brand-green font-medium">Thoughtfully planned homes</p>
+            </div>
+          </motion.div>
+
+          {/* Bottom text */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="mt-20 text-center"
+          >
+            <p className="text-base md:text-xl text-gray-800 font-medium">Bachupally, Hyderabad</p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* MEDIA SECTION */}
+      <section className="bg-white pb-16 md:pb-24 w-full">
+        <motion.div
           ref={containerRef}
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative w-full aspect-video bg-gray-100 rounded-xl overflow-hidden shadow-2xl group cursor-pointer"
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="relative w-full max-w-[1920px] mx-auto aspect-video max-h-[85vh] bg-gray-100 overflow-hidden shadow-2xl group cursor-pointer"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
           onClick={handleClick}
         >
-          <video 
+          <video
             ref={videoRef}
-            src={vanamVideo} 
-            loop 
-            muted 
+            src="/src/assets/videos/vanam-compressed.mp4"
+            loop
+            muted
             playsInline
             preload="none"
             controls={showControls}
             className="w-full h-full object-cover"
           />
-          
+
           {/* Custom cinematic overlay when controls are hidden */}
           {!showControls && (
             <div className="absolute inset-0 bg-black/10 flex items-center justify-center transition-opacity duration-500 group-hover:bg-black/30">
@@ -98,45 +141,7 @@ export default function Stats() {
             </div>
           )}
         </motion.div>
-
-        {/* ROW 3: Stats Grid */}
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="grid grid-cols-2 gap-y-16 gap-x-8 pt-16 max-w-2xl mx-auto"
-        >
-          <div className="text-center">
-            <h3 className="text-3xl md:text-4xl font-sans font-medium text-brand-green mb-2">7 Acre</h3>
-            <p className="text-sm md:text-base text-gray-600">Gated Community</p>
-          </div>
-          <div className="text-center">
-            <h3 className="text-3xl md:text-4xl font-sans font-medium text-brand-green mb-2">4 Towers</h3>
-            <p className="text-sm md:text-base text-gray-600">G + 31 Floors</p>
-          </div>
-          <div className="text-center">
-            <h3 className="text-3xl md:text-4xl font-sans font-medium text-brand-green mb-2">2, 2.5 & 3</h3>
-            <p className="text-sm md:text-base text-gray-600">BHK Residences</p>
-          </div>
-          <div className="text-center">
-            <h3 className="text-3xl md:text-4xl font-sans font-medium text-brand-green mb-2">1388-2515 <span className="text-lg md:text-xl">Sq.ft</span></h3>
-            <p className="text-sm md:text-base text-gray-600">Thoughtfully planned homes</p>
-          </div>
-        </motion.div>
-
-        {/* Bottom text */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="mt-8 text-center"
-        >
-          <p className="text-sm md:text-base text-gray-800">Bachupally, Hyderabad</p>
-        </motion.div>
-
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

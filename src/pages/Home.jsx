@@ -29,9 +29,9 @@ export default function Home() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8 }}
-        className="w-full max-w-[1920px] mx-auto h-auto"
+        className="w-full max-w-[1920px] mx-auto"
       >
-        <img src={img001} alt="Aerial view of Vanam" className="w-full h-full object-cover block" />
+        <img src={img001} alt="Aerial view of Vanam" className="w-full max-h-[85vh] object-cover block" />
       </motion.div>
 
       {/* Text 1 */}
@@ -47,9 +47,9 @@ export default function Home() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8 }}
-        className="w-full max-w-[1920px] mx-auto h-auto"
+        className="w-full max-w-[1920px] mx-auto"
       >
-        <img src={img002} alt="Landscape and ground view" className="w-full h-full object-cover block" />
+        <img src={img002} alt="Landscape and ground view" className="w-full max-h-[85vh] object-cover block" />
       </motion.div>
 
       {/* Text 2 */}
@@ -65,28 +65,16 @@ export default function Home() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8 }}
-        className="w-full max-w-[1920px] mx-auto h-auto"
+        className="w-full max-w-[1920px] mx-auto"
       >
-        <img src={img003} alt="Vanam towers at sunset" className="w-full h-full object-cover block" />
+        <img src={img003} alt="Vanam towers at sunset" className="w-full max-h-[85vh] object-cover block" />
       </motion.div>
 
       {/* Text 3 */}
       <ImageTextSection 
         titlePart1="Architecture"
         titlePart2="with space around it"
-        description="VANAM rises as a distinct architectural presence, with the towers&#10;arranged around a shared community heart.&#10;&#10;The placement of the towers, their relationship to the landscape,&#10;and the movement between them are planned as one connected&#10;experience."
-      />
-
-      {/* Text 4 */}
-      <ImageTextSection 
-        customTitle={
-          <h2 className="text-2xl md:text-3xl font-serif font-normal tracking-wide">
-            <span className="text-brand-green">The care </span>
-            <span className="text-brand-orange italic">ecosystem </span>
-            <span className="text-brand-green">planned into the ground</span>
-          </h2>
-        }
-        description="Homes, landscape, movement, play, recreation, and community&#10;spaces are brought together as one connected environment."
+        description="VANAM rises as a distinct architectural presence, with the towers arranged around a shared community heart.&#10;&#10;The placement of the towers, their relationship to the landscape, and the movement between them are planned as one connected experience.&#10;&#10;Homes, landscape, movement, play, recreation, and community spaces are brought together as one connected environment."
       />
 
       {/* Image 4 - Master Plan */}
@@ -95,9 +83,9 @@ export default function Home() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8 }}
-        className="w-full max-w-[1600px] mx-auto h-auto py-12 px-6"
+        className="w-full max-w-[1600px] mx-auto py-12 px-6"
       >
-        <img src={img004} alt="Master Plan Map" className="w-full h-auto object-contain block mx-auto" />
+        <img src={img004} alt="Master Plan Map" className="w-full max-h-[85vh] object-contain block mx-auto" />
       </motion.div>
 
       {/* Text 5 - T1&4 Floor plans */}
