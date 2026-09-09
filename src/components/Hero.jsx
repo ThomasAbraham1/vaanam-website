@@ -12,7 +12,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="w-full lg:w-[45%] xl:w-[40%] flex flex-col justify-center px-6 sm:px-12 md:px-16 lg:pl-16 xl:pl-28 lg:pr-4 py-8 md:py-12 lg:py-20 lg:self-center z-10 text-left"
+          className="w-full lg:w-[40%] flex flex-col justify-center px-6 sm:px-12 md:px-16 lg:pl-16 xl:pl-28 lg:pr-4 py-8 md:py-12 lg:py-16 lg:self-center z-10 text-left"
         >
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-serif italic font-normal tracking-wide leading-[1.12] mb-5 md:mb-8">
             <span className="text-brand-orange block">Rooted in Green,</span>
@@ -29,12 +29,12 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
-          className="w-full lg:w-[55%] xl:w-[60%] flex justify-center lg:justify-end items-end mt-auto pointer-events-none self-end"
+          className="w-full lg:w-[60%] flex justify-center lg:justify-end items-end mt-auto pointer-events-none self-end"
         >
           <img 
             src={heroImg} 
             alt="Profound Vanam Towers" 
-            className="w-full max-w-xl sm:max-w-2xl md:max-w-3xl lg:max-w-none h-auto object-contain object-bottom block" 
+            className="w-full max-w-xl sm:max-w-2xl md:max-w-3xl lg:max-w-none h-auto max-h-[60vh] object-contain object-bottom block" 
           />
         </motion.div>
 
