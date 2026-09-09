@@ -53,11 +53,12 @@ export default function Amenities() {
       <div className="max-w-[1600px] mx-auto px-0 md:px-8">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 px-4 md:px-0">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-[#3A4042] mb-4 md:mb-6 leading-tight">
-            Modern Living, Elevated
+        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16 px-4 md:px-0">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif italic font-normal mb-4 md:mb-6 leading-tight tracking-wide">
+            <span className="text-brand-orange mr-2">Modern Living,</span>
+            <span className="text-brand-green">Elevated</span>
           </h2>
-          <p className="text-sm md:text-base lg:text-lg text-gray-500 font-light leading-relaxed">
+          <p className="text-sm md:text-base lg:text-lg text-brand-green/80 font-normal leading-relaxed max-w-2xl mx-auto">
             A thoughtfully curated collection of amenities designed to enhance comfort, wellness, recreation, and everyday living.
           </p>
         </div>
@@ -69,8 +70,7 @@ export default function Amenities() {
             className="w-full overflow-x-auto snap-x snap-mandatory flex"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
-            {/* We will use a grid to force 2 rows. 
-                Using auto-columns for precise sizing so it flows horizontally. */}
+            {/* Grid for 2 rows with horizontal scroll */}
             <style dangerouslySetInnerHTML={{__html: `
               .scrollbar-hide::-webkit-scrollbar { display: none; }
               .amenities-grid {
@@ -93,16 +93,16 @@ export default function Amenities() {
                 return (
                   <div 
                     key={'amenity-' + item.id} 
-                    className={`amenity-item snap-start flex flex-col items-center justify-center p-4 sm:p-6 lg:p-8 aspect-[4/3] lg:aspect-auto lg:h-[240px] xl:h-[280px] bg-white hover:bg-gray-50 transition-colors border-r border-b border-[#E5E7EB] ${
+                    className={`amenity-item snap-start flex flex-col items-center justify-center p-4 sm:p-6 lg:p-8 aspect-[4/3] lg:aspect-auto lg:h-[240px] xl:h-[280px] bg-white hover:bg-[#FAF8F5] transition-colors border-r border-b border-[#EAE8E3] group ${
                       isTopRow ? 'border-t' : ''
                     } ${
                       isFirstCol ? 'border-l' : ''
                     }`}
                   >
-                    <div className="w-14 h-14 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full bg-[#F5F4EF] flex items-center justify-center mb-3 sm:mb-4 md:mb-6">
-                      <img src={iconSrc} alt={item.title} className="w-6 h-6 sm:w-8 sm:h-8 md:w-12 md:h-12 object-contain" />
+                    <div className="w-14 h-14 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full bg-[#F5F2EC] group-hover:bg-[#EFEAE1] transition-colors flex items-center justify-center mb-3 sm:mb-4 md:mb-6">
+                      <img src={iconSrc} alt={item.title} className="w-6 h-6 sm:w-8 sm:h-8 md:w-12 md:h-12 object-contain opacity-85 group-hover:opacity-100 transition-opacity" />
                     </div>
-                    <h3 className="text-[9px] sm:text-[10px] md:text-xs font-bold text-gray-600 tracking-wider text-center uppercase">
+                    <h3 className="text-[9px] sm:text-[10px] md:text-xs font-semibold text-brand-green tracking-widest text-center uppercase group-hover:text-brand-orange transition-colors">
                       {item.title}
                     </h3>
                   </div>
@@ -116,14 +116,14 @@ export default function Amenities() {
         <div className="flex items-center justify-center gap-4">
           <button 
             onClick={() => scrollByOneColumn('left')}
-            className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#EF5B4A] hover:bg-[#D44A3C] transition-colors flex items-center justify-center text-white cursor-pointer"
+            className="w-11 h-11 md:w-12 md:h-12 rounded-full bg-brand-green hover:bg-brand-orange transition-all duration-300 flex items-center justify-center text-white cursor-pointer shadow-md hover:shadow-lg active:scale-95"
             aria-label="Previous amenities"
           >
             <ArrowLeft size={20} />
           </button>
           <button 
             onClick={() => scrollByOneColumn('right')}
-            className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#EF5B4A] hover:bg-[#D44A3C] transition-colors flex items-center justify-center text-white cursor-pointer"
+            className="w-11 h-11 md:w-12 md:h-12 rounded-full bg-brand-green hover:bg-brand-orange transition-all duration-300 flex items-center justify-center text-white cursor-pointer shadow-md hover:shadow-lg active:scale-95"
             aria-label="Next amenities"
           >
             <ArrowRight size={20} />
