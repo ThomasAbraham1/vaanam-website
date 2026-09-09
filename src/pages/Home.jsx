@@ -5,18 +5,13 @@ import Stats from '../components/Stats';
 import ImageTextSection from '../components/ImageTextSection';
 import Amenities from '../components/Amenities';
 
+import LiveTheWayYouWant from '../components/LiveTheWayYouWant';
+
 // All images mapped sequentially from 001 to 011
 import img001 from '../assets/images/001 Photo.webp';
 import img002 from '../assets/images/002 Photo.webp';
 import img003 from '../assets/images/003 Photo.webp';
 import img004 from '../assets/images/004 Photo.webp';
-import img005 from '../assets/images/005 Photo.webp';
-import img006 from '../assets/images/006 Photo.webp';
-import img007 from '../assets/images/007 Photo.webp';
-import img008 from '../assets/images/008 Photo.webp';
-import img009 from '../assets/images/009 Photo.webp';
-import img010 from '../assets/images/010 Photo.webp';
-import img011 from '../assets/images/011 Photo.webp';
 
 export default function Home() {
   return (
@@ -104,52 +99,8 @@ export default function Home() {
       {/* Amenities Section */}
       <Amenities />
 
-      {/* Text 5 - T1&4 Floor plans */}
-      <ImageTextSection 
-        titlePart1="Typical"
-        titlePart2="floor plans"
-        subTitle="TOWER 1 & 4 | 2nd Floor to 31st Floors"
-      />
-
-      {/* Image 5 - Outline Site Plan T1&4 */}
-      <div className="w-full max-w-[1600px] mx-auto h-auto px-4 pb-0 md:px-6 md:pb-0 lg:pb-12">
-        <img src={img005} alt="Outline Site Plan Tower 1 and 4" className="w-full h-auto object-contain mx-auto max-w-4xl block" />
-      </div>
-
-      {/* Image 6 - Area Table T1&4 */}
-      <div className="w-full max-w-[1600px] mx-auto h-auto px-4 pb-0 md:px-6 md:pb-0 lg:pb-12">
-        <img src={img006} alt="Area Table Tower 1 and 4" className="w-full h-auto object-contain mx-auto max-w-4xl block" />
-      </div>
-
-      {/* Image 7 - Floor Plan T1&4 */}
-      <div className="w-full max-w-[1600px] mx-auto h-auto px-4 pb-0 md:px-6 md:pb-0 lg:pb-24">
-        <img src={img007} alt="Detailed Floor Plan Tower 1 and 4" className="w-full h-auto object-contain mx-auto max-w-4xl block" />
-      </div>
-
-      {/* Text 6 - T2&3 Floor plans */}
-      <ImageTextSection 
-        titlePart1="Typical"
-        titlePart2="floor plans"
-        subTitle="TOWER 2 & 3 | 2nd Floor to 31st Floors"
-      />
-
-      {/* Images 008 & 009 - Outline Site Plan T2&3 with Compass */}
-      <div className="w-full max-w-[1600px] mx-auto h-auto px-4 pb-0 md:px-6 md:pb-0 lg:pb-12">
-        <div className="relative w-full max-w-4xl mx-auto">
-          <img src={img008} alt="Outline Site Plan Tower 2 and 3" className="w-full h-auto object-contain block mx-auto" />
-          <img src={img009} alt="Compass" className="absolute top-0 right-0 w-20 md:w-32 h-auto object-contain" />
-        </div>
-      </div>
-
-      {/* Image 010 - Area Table T2&3 */}
-      <div className="w-full max-w-[1600px] mx-auto h-auto px-6 pb-12">
-        <img src={img010} alt="Area Table Tower 2 and 3" className="w-full h-auto object-contain mx-auto max-w-4xl block" />
-      </div>
-
-      {/* Image 011 - Floor Plan T2&3 */}
-      <div className="w-full max-w-[1600px] mx-auto h-auto px-6 pb-24">
-        <img src={img011} alt="Detailed Floor Plan Tower 2 and 3" className="w-full h-auto object-contain mx-auto max-w-4xl block" />
-      </div>
+      {/* Live The Way You Want Section */}
+      <LiveTheWayYouWant />
     </div>
   );
 }
