@@ -11,7 +11,7 @@ const floorPlans = [
     subtitle: "Tower 1 & 4 | Typical Floor Plans",
     image: plan1Img,
     // Replace with your actual Google Drive PDF share link
-    pdfUrl: "https://drive.google.com/",
+    pdfUrl: "https://drive.google.com/file/d/1J1obqgyDyCgmEoooLT5hc_bJe_XNpWg8/view?usp=drive_link",
   },
   {
     id: 2,
@@ -19,14 +19,14 @@ const floorPlans = [
     subtitle: "Tower 2 & 3 | Typical Floor Plans",
     image: plan2Img,
     // Replace with your actual Google Drive PDF share link
-    pdfUrl: "https://drive.google.com/",
+    pdfUrl: "https://drive.google.com/file/d/1HlqqHCWwUu7hoIMsKnKAw6I8KOzrzpHz/view?usp=drive_link",
   },
 ];
 
 export default function LiveTheWayYouWant() {
   return (
     <section className="bg-white py-16 md:py-24 lg:py-32 w-full text-gray-800">
-      <div className="max-w-[1600px] mx-auto px-6 sm:px-10 md:px-16 lg:px-20">
+      <div className="max-w-[1600px] mx-auto px-6 sm:px-10 md:px-16 lg:px-20 lg:pb-48">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
