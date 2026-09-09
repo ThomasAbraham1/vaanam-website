@@ -14,7 +14,7 @@ export default function Navbar() {
 
   return (
     <div className="w-full bg-brand-green z-50 relative">
-      <header className="w-full max-w-[2560px] mx-auto px-6 py-6 md:px-12 md:py-8 lg:px-20 xl:px-28 2xl:px-36 flex justify-between items-center text-white">
+      <header className="w-full max-w-[1600px] mx-auto px-6 py-6 md:px-12 md:py-8 flex justify-between items-center text-white">
         {/* Logo */}
         <Link to="/" className="flex-shrink-0 z-50">
           <img src={logoImg} alt="Profound Vanam Logo" className="h-10 md:h-14 w-auto object-contain" />
