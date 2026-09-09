@@ -83,12 +83,12 @@ export default function Gallery() {
        {/* Text 2 */}
        <ImageTextSection 
          customTitle={
-           <h2 className="text-2xl md:text-3xl lg:text-5xl font-serif italic font-normal tracking-wide leading-tight mb-4">
+           <h2 className="text-2xl md:text-3xl lg:text-5xl font-serif italic font-normal tracking-wide leading-tight mb-4 md:mb-6">
              <span className="block text-brand-orange">Two Clubhouses.</span>
              <span className="block text-brand-green">More ways to live well.</span>
            </h2>
          }
-         description="Social, wellness, work, and family needs find distinct settings,&#10;allowing the community to support both energy and ease."
+         description={"Social, wellness, work, and family needs find distinct settings,\nallowing the community to support both energy and ease."}
        />
 
        {/* Full width clubhouses & Asymmetrical Grid Block */}
@@ -116,12 +116,12 @@ export default function Gallery() {
        {/* Text 3 */}
        <ImageTextSection 
          customTitle={
-           <h2 className="text-2xl md:text-3xl lg:text-5xl font-serif italic font-normal tracking-wide leading-tight mb-4">
-             <span className="block text-brand-orange">Two Clubhouses.</span>
-             <span className="block text-brand-green">More ways to live well.</span>
+           <h2 className="text-2xl md:text-3xl lg:text-5xl font-serif italic font-normal tracking-wide leading-tight mb-4 md:mb-6">
+             <span className="block text-brand-orange">Designed for</span>
+             <span className="block text-brand-green">connection &amp; play</span>
            </h2>
          }
-         description="Social, wellness, work, and family needs find distinct settings,&#10;allowing the community to support both energy and ease."
+         description={"Dedicated play areas, open lawns, and outdoor stages\ncreate vibrant spaces for every generation to connect."}
        />
 
        {/* Collage 2 (Asymmetric) */}
@@ -147,7 +147,7 @@ export default function Gallery() {
        {/* New Section (Upscaled additions) */}
        <ImageTextSection 
          customTitle={
-           <h2 className="text-2xl md:text-3xl lg:text-5xl font-serif italic font-normal tracking-wide leading-tight mb-4">
+           <h2 className="text-2xl md:text-3xl lg:text-5xl font-serif italic font-normal tracking-wide leading-tight mb-4 md:mb-6">
              <span className="block text-brand-orange">Elevated</span>
              <span className="block text-brand-green">Living Spaces</span>
            </h2>
