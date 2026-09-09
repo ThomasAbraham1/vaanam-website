@@ -26,7 +26,7 @@ const floorPlans = [
 export default function LiveTheWayYouWant() {
   return (
     <section className="bg-white py-16 md:py-24 lg:py-32 w-full text-gray-800">
-      <div className="max-w-[1600px] mx-auto px-6 sm:px-10 md:px-16 lg:px-20 lg:pb-48">
+      <div className="max-w-[1600px] mx-auto px-6 sm:px-10 md:px-16 lg:px-20 lg:py-48 ">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">

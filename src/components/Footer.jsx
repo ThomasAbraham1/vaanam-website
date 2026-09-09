@@ -20,28 +20,26 @@ export default function Footer() {
           </div>
 
           {/* Column 2: Project Address & Links */}
-          <div className="flex flex-col text-sm space-y-3 font-sans">
-            <p className="font-bold text-brand-orange uppercase tracking-wider text-xs">
-              Project Address:
-            </p>
-            <div className="text-white/90 leading-relaxed font-light">
-              <p className="font-semibold text-white">PROFOUND VANAM</p>
+          <div className="flex flex-col text-sm space-y-2 font-sans text-white/90">
+            <p className="font-bold text-white">Project Address:</p>
+            <div className="leading-relaxed font-light">
+              <p>PROFOUND VANAM</p>
               <p>Pragathi Nagar</p>
               <p>Near Exit Kaman, Telangana</p>
             </div>
-            <div className="pt-2 text-xs font-semibold uppercase tracking-wider text-brand-orange space-x-3">
+            <div className="pt-3 text-brand-orange space-x-2">
               <Link to="/gallery" className="hover:text-white transition-colors">Gallery</Link>
-              <span>|</span>
+              <span className="text-brand-orange">|</span>
               <Link to="/contact" className="hover:text-white transition-colors">Contact Us</Link>
             </div>
           </div>
 
           {/* Column 3: Disclaimer & Copyright */}
-          <div className="flex flex-col text-xs space-y-3 max-w-md font-sans text-white/80">
-            <p className="leading-relaxed">
+          <div className="flex flex-col text-sm space-y-2 max-w-md font-sans text-white/90">
+            <p className="leading-relaxed font-light">
               <span className="font-bold text-white">Disclaimer:</span> Images are for representation only. Specifications and details are subject to change. Please refer to the sanctioned plans for accurate project information.
             </p>
-            <p className="text-white/60 pt-2">
+            <p className="text-brand-orange pt-3">
               Copyright © 2026 All rights reserved.
             </p>
           </div>
