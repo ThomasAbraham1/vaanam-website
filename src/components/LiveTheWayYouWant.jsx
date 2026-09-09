@@ -11,7 +11,7 @@ const floorPlans = [
     subtitle: "Tower 1 & 4 | Typical Floor Plans",
     image: plan1Img,
     // Replace with your actual Google Drive PDF share link
-    pdfUrl: "https://drive.google.com/file/d/1J1obqgyDyCgmEoooLT5hc_bJe_XNpWg8/view?usp=drive_link",
+    pdfUrl: "https://drive.google.com/file/d/1HlqqHCWwUu7hoIMsKnKAw6I8KOzrzpHz/view?usp=drive_link",
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const floorPlans = [
     subtitle: "Tower 2 & 3 | Typical Floor Plans",
     image: plan2Img,
     // Replace with your actual Google Drive PDF share link
-    pdfUrl: "https://drive.google.com/file/d/1HlqqHCWwUu7hoIMsKnKAw6I8KOzrzpHz/view?usp=drive_link",
+    pdfUrl: "https://drive.google.com/file/d/1J1obqgyDyCgmEoooLT5hc_bJe_XNpWg8/view?usp=drive_link",
   },
 ];
 
