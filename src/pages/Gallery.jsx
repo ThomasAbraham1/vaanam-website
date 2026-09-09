@@ -29,11 +29,11 @@ export default function Gallery() {
   return (
     <div className="flex flex-col">
        {/* Hero Heading */}
-       <section className="bg-white py-48 px-6 md:px-12 text-center">
-         <h1 className="text-4xl md:text-6xl font-serif font-normal tracking-wide text-brand-green mb-6">
-           A Closer Look at <span className="font-serif italic text-brand-orange">Vanam</span>
+       <section className="bg-white py-24 md:py-36 lg:py-48 px-6 md:px-12 text-center">
+         <h1 className="text-3xl md:text-4xl lg:text-6xl font-serif italic font-normal tracking-wide text-brand-green mb-4 md:mb-6">
+           A Closer Look at <span className="text-brand-orange">Vanam</span>
          </h1>
-         <p className="text-base md:text-xl text-brand-green font-medium">
+         <p className="text-sm md:text-base lg:text-xl text-brand-green font-medium">
            Explore the spaces, architecture, and lifestyle designed around you.
          </p>
        </section>
@@ -52,7 +52,7 @@ export default function Gallery() {
        {/* Text 1 */}
        <ImageTextSection 
          customTitle={
-           <h2 className="text-3xl md:text-5xl font-serif italic font-normal tracking-wide leading-tight mb-4">
+           <h2 className="text-2xl md:text-3xl lg:text-5xl font-serif italic font-normal tracking-wide leading-tight mb-4">
              <span className="text-brand-orange">The home </span>
              <span className="text-brand-green">takes care of you</span>
            </h2>
@@ -68,22 +68,22 @@ export default function Gallery() {
          transition={{ duration: 0.8 }}
          className="w-full max-w-[1920px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4 pb-0"
        >
-         <div className="h-full">
+         <div className="h-[60vw] md:h-auto">
            <img src={img002} alt="Balcony relaxation" className="w-full h-full object-cover block" />
          </div>
-         <div className="flex flex-col gap-2 md:gap-4 h-full">
+         <div className="flex flex-col gap-2 md:gap-4 h-[60vw] md:h-auto">
            <img src={img003} alt="Kitchen" className="w-full h-1/2 object-cover block" />
            <img src={img004} alt="Bedroom" className="w-full h-1/2 object-cover block" />
          </div>
          <div className="md:col-span-2 w-full">
-           <img src={img005} alt="Balcony Sunset" className="w-full max-h-[85vh] object-cover block" />
+           <img src={img005} alt="Balcony Sunset" className="w-full max-h-[60vw] md:max-h-[85vh] object-cover block" />
          </div>
        </motion.div>
 
        {/* Text 2 */}
        <ImageTextSection 
          customTitle={
-           <h2 className="text-3xl md:text-5xl font-serif italic font-normal tracking-wide leading-tight mb-4">
+           <h2 className="text-2xl md:text-3xl lg:text-5xl font-serif italic font-normal tracking-wide leading-tight mb-4">
              <span className="text-brand-orange">Two Clubhouses. </span>
              <span className="text-brand-green">More ways to live well.</span>
            </h2>
@@ -99,24 +99,24 @@ export default function Gallery() {
          transition={{ duration: 0.8 }}
          className="w-full max-w-[1920px] mx-auto flex flex-col gap-2 md:gap-4"
        >
-         <img src={img006} alt="Round Clubhouse" className="w-full max-h-[85vh] object-cover block" />
-         <img src={img007} alt="Rectangular Clubhouse" className="w-full max-h-[85vh] object-cover block" />
+         <img src={img006} alt="Round Clubhouse" className="w-full max-h-[60vw] md:max-h-[85vh] object-cover block" />
+         <img src={img007} alt="Rectangular Clubhouse" className="w-full max-h-[60vw] md:max-h-[85vh] object-cover block" />
          
-         {/* 4-Image Asymmetrical Grid (1/3 & 2/3) */}
-         <div className="w-full grid grid-cols-1 md:grid-cols-5 gap-2 md:gap-4">
-           <img src={img008} alt="Salon" className="w-full h-full object-cover md:col-span-3" />
-           <img src={img009} alt="Kids Area" className="w-full h-full object-cover md:col-span-2" />
-           <img src={img011} alt="Cinema" className="w-full h-full object-cover md:col-span-2" />
-           <img src={img010} alt="Dining" className="w-full h-full object-cover md:col-span-3" />
+         {/* 4-Image Asymmetrical Grid — 2-col on mobile, 5-col on desktop */}
+         <div className="w-full grid grid-cols-2 md:grid-cols-5 gap-2 md:gap-4">
+           <img src={img008} alt="Salon" className="w-full h-[40vw] md:h-full object-cover md:col-span-3" />
+           <img src={img009} alt="Kids Area" className="w-full h-[40vw] md:h-full object-cover md:col-span-2" />
+           <img src={img011} alt="Cinema" className="w-full h-[40vw] md:h-full object-cover md:col-span-2" />
+           <img src={img010} alt="Dining" className="w-full h-[40vw] md:h-full object-cover md:col-span-3" />
          </div>
 
-         <img src={img012} alt="Coworking space" className="w-full max-h-[85vh] object-cover block" />
+         <img src={img012} alt="Coworking space" className="w-full max-h-[60vw] md:max-h-[85vh] object-cover block" />
        </motion.div>
 
        {/* Text 3 */}
        <ImageTextSection 
          customTitle={
-           <h2 className="text-3xl md:text-5xl font-serif italic font-normal tracking-wide leading-tight mb-4">
+           <h2 className="text-2xl md:text-3xl lg:text-5xl font-serif italic font-normal tracking-wide leading-tight mb-4">
              <span className="text-brand-orange">Two Clubhouses. </span>
              <span className="text-brand-green">More ways to live well.</span>
            </h2>
@@ -132,15 +132,15 @@ export default function Gallery() {
          transition={{ duration: 0.8 }}
          className="w-full max-w-[1920px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4 pb-0"
        >
-         <div className="h-full">
+         <div className="h-[60vw] md:h-auto">
            <img src={img013} alt="Baby on grass" className="w-full h-full object-cover block" />
          </div>
-         <div className="flex flex-col gap-2 md:gap-4 h-full">
+         <div className="flex flex-col gap-2 md:gap-4 h-[60vw] md:h-auto">
            <img src={img014} alt="Outdoor Stage" className="w-full h-1/2 object-cover block" />
            <img src={img015} alt="Kids slide" className="w-full h-1/2 object-cover block" />
          </div>
          <div className="md:col-span-2 w-full">
-           <img src={img016} alt="Dining area" className="w-full max-h-[85vh] object-cover block" />
+           <img src={img016} alt="Dining area" className="w-full max-h-[60vw] md:max-h-[85vh] object-cover block" />
          </div>
        </motion.div>
 

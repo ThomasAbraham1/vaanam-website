@@ -45,7 +45,7 @@ export default function Stats() {
   return (
     <>
       {/* TEXT SECTION */}
-      <section className="bg-white pt-32 pb-12 md:pt-48 md:pb-24 px-6 sm:px-12 md:px-24 text-gray-800">
+      <section className="bg-white pt-16 pb-8 md:pt-32 md:pb-12 lg:pt-48 lg:pb-24 px-6 sm:px-12 md:px-24 text-gray-800">
         <div className="max-w-[1600px] mx-auto w-full flex flex-col items-center text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -54,11 +54,11 @@ export default function Stats() {
             transition={{ duration: 0.8 }}
             className="max-w-6xl"
           >
-            <h2 className="text-3xl md:text-5xl font-serif italic font-normal mb-6 leading-tight tracking-wide">
+            <h2 className="text-2xl md:text-3xl lg:text-5xl font-serif italic font-normal mb-4 md:mb-6 leading-tight tracking-wide">
               <span className="text-brand-green">A New Standard of </span>
               <span className="text-brand-orange">Care-led Living</span>
             </h2>
-            <p className="text-sm md:text-2xl leading-relaxed text-brand-green/90 font-medium">
+            <p className="text-sm md:text-lg lg:text-2xl leading-relaxed text-brand-green/90 font-medium">
               Minnaro Architects is an award-winning modern architecture firm based in New York. We specialize in contemporary design through our signature Natural Modern approach.
             </p>
           </motion.div>
@@ -66,30 +66,30 @@ export default function Stats() {
       </section>
 
       {/* STATS SECTION */}
-      <section className="bg-white py-2 pb-32 md:pb-48 px-6 sm:px-12 md:px-24 text-gray-800">
+      <section className="bg-white py-2 pb-12 md:pb-24 lg:pb-48 px-6 sm:px-12 md:px-24 text-gray-800">
         <div className="max-w-[1600px] mx-auto w-full flex flex-col items-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="grid grid-cols-2 gap-y-16 gap-x-12 md:gap-x-32 pt-8 w-full max-w-8xl text-center"
+            className="grid grid-cols-2 gap-y-10 gap-x-8 md:gap-y-16 md:gap-x-20 lg:gap-x-32 pt-8 w-full max-w-8xl text-center"
           >
             <div className="flex flex-col items-center">
-              <h3 className="text-4xl md:text-6xl font-normal text-brand-green mb-3">7 Acre</h3>
-              <p className="text-base md:text-2xl text-brand-green font-semibold">Gated Community</p>
+              <h3 className="text-3xl md:text-4xl lg:text-6xl font-normal text-brand-green mb-2 md:mb-3">7 Acre</h3>
+              <p className="text-sm md:text-lg lg:text-2xl text-brand-green font-semibold">Gated Community</p>
             </div>
             <div className="flex flex-col items-center">
-              <h3 className="text-4xl md:text-6xl font-normal text-brand-green mb-3">4 Towers</h3>
-              <p className="text-base md:text-2xl text-brand-green font-semibold">G + 31 Floors</p>
+              <h3 className="text-3xl md:text-4xl lg:text-6xl font-normal text-brand-green mb-2 md:mb-3">4 Towers</h3>
+              <p className="text-sm md:text-lg lg:text-2xl text-brand-green font-semibold">G + 31 Floors</p>
             </div>
             <div className="flex flex-col items-center">
-              <h3 className="text-4xl md:text-6xl font-normal text-brand-green mb-3">2, 2.5 & 3</h3>
-              <p className="text-base md:text-2xl text-brand-green font-semibold">BHK Residences</p>
+              <h3 className="text-3xl md:text-4xl lg:text-6xl font-normal text-brand-green mb-2 md:mb-3">2, 2.5 &amp; 3</h3>
+              <p className="text-sm md:text-lg lg:text-2xl text-brand-green font-semibold">BHK Residences</p>
             </div>
             <div className="flex flex-col items-center">
-              <h3 className="text-4xl md:text-6xl font-normal text-brand-green mb-3">1388-2515 <span className="text-2xl md:text-3xl">Sq.ft</span></h3>
-              <p className="text-base md:text-2xl text-brand-green font-semibold">Thoughtfully planned homes</p>
+              <h3 className="text-3xl md:text-4xl lg:text-6xl font-normal text-brand-green mb-2 md:mb-3">1388-2515 <span className="text-xl md:text-2xl lg:text-3xl">Sq.ft</span></h3>
+              <p className="text-sm md:text-lg lg:text-2xl text-brand-green font-semibold">Thoughtfully planned homes</p>
             </div>
           </motion.div>
 
@@ -99,15 +99,15 @@ export default function Stats() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="mt-20 text-center"
+            className="mt-12 md:mt-20 text-center"
           >
-            <p className="text-base md:text-xl text-gray-800 font-semibold">Bachupally, Hyderabad</p>
+            <p className="text-sm md:text-base lg:text-xl text-gray-800 font-semibold">Bachupally, Hyderabad</p>
           </motion.div>
         </div>
       </section>
 
       {/* MEDIA SECTION */}
-      <section className="bg-white pb-16 md:pb-24 w-full">
+      <section className="bg-white pb-16 md:pb-0 w-full">
         <motion.div
           ref={containerRef}
           initial={{ opacity: 0, scale: 0.95 }}
