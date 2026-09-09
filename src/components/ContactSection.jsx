@@ -59,7 +59,7 @@ export default function ContactSection() {
       
       {/* CALLBACK FORM & CONTACT / MAP SECTION */}
       <section className="py-16 md:py-24 px-6 sm:px-10 md:px-16 lg:px-20 max-w-[1600px] mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-stretch">
           
           {/* Left Column: Request Callback Form */}
           <motion.div 
@@ -182,11 +182,11 @@ export default function ContactSection() {
             </div>
 
             {/* Satellite Map Embed */}
-            <div className="relative w-full h-[280px] sm:h-[340px] md:h-[450px] rounded-2xl overflow-hidden border border-gray-200 shadow-sm bg-gray-100">
+            <div className="relative w-full flex-1 min-h-[300px] rounded-2xl overflow-hidden border border-gray-200 shadow-sm bg-gray-100">
               <iframe
                 title="Profound Vanam Google Map Location"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1599.4946702525208!2d78.39825812901017!3d17.542761573186926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8f00515479ed%3A0x2445302897578c6b!2sProfound%20Vanam!5e0!3m2!1sen!2sin!4v1788960718389!5m2!1sen!2sin"
-                className="w-full h-full border-0"
+                className="absolute inset-0 w-full h-full border-0"
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="strict-origin-when-cross-origin"

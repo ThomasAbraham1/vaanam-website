@@ -34,7 +34,7 @@ const legends = [
 
 export default function MasterPlanSection() {
   return (
-    <section className="bg-white py-12 md:py-20 lg:pt-48 w-full text-gray-800">
+    <section className="bg-white py-12 md:py-20 lg:pt-48 lg:pb-0 w-full text-gray-800">
       <div className="max-w-[1600px] mx-auto px-6 sm:px-10 md:px-16 lg:px-20">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
