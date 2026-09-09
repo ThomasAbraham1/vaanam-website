@@ -49,7 +49,7 @@ export default function Amenities() {
   };
 
   return (
-    <section className="bg-white py-16 md:py-24 w-full">
+    <section className="bg-white py-16 md:pt-48 w-full">
       <div className="max-w-[1600px] mx-auto px-0 md:px-8">
         
         {/* Header */}

@@ -16,8 +16,8 @@ export default function ImageTextSection({ titlePart1, titlePart2, customTitle, 
             customTitle
           ) : (
             <h2 className="text-2xl md:text-3xl lg:text-5xl font-serif italic font-normal mb-4 md:mb-6 leading-tight tracking-wide">
-              <span className="text-brand-orange mr-2">{titlePart1}</span>
-              <span className="text-brand-green">{titlePart2}</span>
+              <span className="block text-brand-orange mb-1">{titlePart1}</span>
+              <span className="block text-brand-green">{titlePart2}</span>
             </h2>
           )}
           

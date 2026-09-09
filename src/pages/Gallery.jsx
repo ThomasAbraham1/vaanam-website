@@ -51,10 +51,10 @@ export default function Gallery() {
 
        {/* Text 1 */}
        <ImageTextSection 
-         customTitle={
+         customTitle={  
            <h2 className="text-2xl md:text-3xl lg:text-5xl font-serif italic font-normal tracking-wide leading-tight mb-4">
-             <span className="text-brand-orange">The home </span>
-             <span className="text-brand-green">takes care of you</span>
+             <span className="block text-brand-orange">The home</span>
+             <span className="block text-brand-green">takes care of you</span>
            </h2>
          }
          description="Light where you need it.&#10;Air that moves through the home.&#10;Space for people to come together, and enough room to retreat."
@@ -84,8 +84,8 @@ export default function Gallery() {
        <ImageTextSection 
          customTitle={
            <h2 className="text-2xl md:text-3xl lg:text-5xl font-serif italic font-normal tracking-wide leading-tight mb-4">
-             <span className="text-brand-orange">Two Clubhouses. </span>
-             <span className="text-brand-green">More ways to live well.</span>
+             <span className="block text-brand-orange">Two Clubhouses.</span>
+             <span className="block text-brand-green">More ways to live well.</span>
            </h2>
          }
          description="Social, wellness, work, and family needs find distinct settings,&#10;allowing the community to support both energy and ease."
@@ -117,8 +117,8 @@ export default function Gallery() {
        <ImageTextSection 
          customTitle={
            <h2 className="text-2xl md:text-3xl lg:text-5xl font-serif italic font-normal tracking-wide leading-tight mb-4">
-             <span className="text-brand-orange">Two Clubhouses. </span>
-             <span className="text-brand-green">More ways to live well.</span>
+             <span className="block text-brand-orange">Two Clubhouses.</span>
+             <span className="block text-brand-green">More ways to live well.</span>
            </h2>
          }
          description="Social, wellness, work, and family needs find distinct settings,&#10;allowing the community to support both energy and ease."
@@ -146,8 +146,12 @@ export default function Gallery() {
 
        {/* New Section (Upscaled additions) */}
        <ImageTextSection 
-         titlePart1="Elevated"
-         titlePart2="Living Spaces"
+         customTitle={
+           <h2 className="text-2xl md:text-3xl lg:text-5xl font-serif italic font-normal tracking-wide leading-tight mb-4">
+             <span className="block text-brand-orange">Elevated</span>
+             <span className="block text-brand-green">Living Spaces</span>
+           </h2>
+         }
          description="A closer look at the meticulously crafted interiors and community zones."
        />
        <motion.div 
