@@ -29,8 +29,8 @@ export default function Gallery() {
   return (
     <div className="flex flex-col">
        {/* Hero Heading */}
-       <section className="bg-white py-24 md:py-36 lg:py-48 px-6 md:px-12 text-center">
-         <h1 className="text-3xl md:text-4xl lg:text-6xl font-serif italic font-normal tracking-wide text-brand-green mb-4 md:mb-6">
+       <section className="bg-white py-12 md:py-24 lg:py-36 px-6 md:px-12 text-center">
+         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-serif italic font-normal tracking-wide text-brand-green mb-3 md:mb-6">
            A Closer Look at <span className="text-brand-orange">Vanam</span>
          </h1>
          <p className="text-sm md:text-base lg:text-xl text-brand-green font-medium">

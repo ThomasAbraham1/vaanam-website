@@ -95,7 +95,7 @@ export default function Home() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8 }}
-        className="w-full max-w-[1600px] mx-auto pt-8 pb-0 px-4 md:pt-12 md:pb-0 md:px-6 lg:py-12"
+        className="w-full max-w-[1600px] mx-auto py-6 md:py-8 lg:py-12 px-4 md:px-6"
       >
         <img src={img004} alt="Master Plan Map" className="w-full max-h-[85vh] object-contain block mx-auto" />
       </motion.div>

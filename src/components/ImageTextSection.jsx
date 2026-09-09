@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export default function ImageTextSection({ titlePart1, titlePart2, customTitle, subTitle, description }) {
   return (
-    <section className="bg-white pt-20 pb-6 md:pt-36 md:pb-10 lg:pt-48 lg:pb-48 px-6 sm:px-12 md:px-24 text-gray-800">
+    <section className="bg-white py-12 md:py-24 lg:py-36 px-6 sm:px-12 md:px-24 text-gray-800">
       <div className="max-w-[1600px] mx-auto w-full flex flex-col items-center text-center"> 
         <motion.div
           initial={{ opacity: 0, y: 30 }}

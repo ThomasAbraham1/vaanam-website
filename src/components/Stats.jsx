@@ -45,7 +45,7 @@ export default function Stats() {
   return (
     <>
       {/* TEXT SECTION */}
-      <section className="bg-white pt-16 pb-8 md:pt-32 md:pb-12 lg:pt-48 lg:pb-24 px-6 sm:px-12 md:px-24 text-gray-800">
+      <section className="bg-white pt-12 md:pt-24 lg:pt-36 pb-4 md:pb-8 lg:pb-12 px-6 sm:px-12 md:px-24 text-gray-800">
         <div className="max-w-[1600px] mx-auto w-full flex flex-col items-center text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -66,7 +66,7 @@ export default function Stats() {
       </section>
 
       {/* STATS SECTION */}
-      <section className="bg-white py-2 pb-12 md:pb-24 lg:pb-48 px-6 sm:px-12 md:px-24 text-gray-800">
+      <section className="bg-white pt-2 pb-12 md:pb-24 lg:pb-36 px-6 sm:px-12 md:px-24 text-gray-800">
         <div className="max-w-[1600px] mx-auto w-full flex flex-col items-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
