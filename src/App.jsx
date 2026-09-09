@@ -3,6 +3,9 @@ import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Gallery from './pages/Gallery';
+import Contact from './pages/Contact';
+import ContactSection from './components/ContactSection';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -13,13 +16,12 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/gallery" element={<Gallery />} />
-          {/* <Route path="/contact" element={<Contact />} /> */}
+          <Route path="/contact" element={<Contact />} />
         </Routes>
+        <ContactSection />
       </main>
 
-      <footer className="w-full bg-brand-green text-white py-12 text-center mt-auto">
-        <p className="opacity-80">Footer / Contact Page coming soon...</p>
-      </footer>
+      <Footer />
     </div>
   );
 }
