@@ -66,7 +66,7 @@ export default function Gallery() {
          whileInView={{ opacity: 1, y: 0 }}
          viewport={{ once: true, margin: "-100px" }}
          transition={{ duration: 0.8 }}
-         className="w-full max-w-[1920px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4 pb-24"
+         className="w-full max-w-[1920px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4 pb-0"
        >
          <div className="h-full">
            <img src={img002} alt="Balcony relaxation" className="w-full h-full object-cover block" />
