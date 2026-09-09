@@ -78,21 +78,26 @@ export default function Amenities() {
                 grid-template-rows: repeat(2, minmax(0, 1fr));
                 grid-auto-flow: column;
                 grid-auto-columns: 50vw;
-                border-top: 1px solid #e5e7eb;
-                border-left: 1px solid #e5e7eb;
               }
               @media (min-width: 640px) { .amenities-grid { grid-auto-columns: 50vw; } }
-              @media (min-width: 768px) { .amenities-grid { grid-auto-columns: 33.333vw; } }
+              @media (min-width: 768px) { .amenities-grid { grid-auto-columns: 33.3333%; } }
               @media (min-width: 1024px) { .amenities-grid { grid-auto-columns: 20%; } }
             `}} />
             
-            <div className="amenities-grid scrollbar-hide flex-1 min-w-full bg-gray-200 gap-[1px]">
-              {amenities.map((item) => {
+            <div className="amenities-grid scrollbar-hide flex-1">
+              {amenities.map((item, index) => {
                 const iconSrc = item.icon;
+                const isTopRow = index % 2 === 0;
+                const isFirstCol = index < 2;
+
                 return (
                   <div 
                     key={'amenity-' + item.id} 
-                    className="amenity-item snap-start flex flex-col items-center justify-center p-4 sm:p-6 lg:p-8 aspect-[4/3] lg:aspect-auto lg:h-[240px] xl:h-[280px] bg-white hover:bg-gray-50 transition-colors"
+                    className={`amenity-item snap-start flex flex-col items-center justify-center p-4 sm:p-6 lg:p-8 aspect-[4/3] lg:aspect-auto lg:h-[240px] xl:h-[280px] bg-white hover:bg-gray-50 transition-colors border-r border-b border-[#E5E7EB] ${
+                      isTopRow ? 'border-t' : ''
+                    } ${
+                      isFirstCol ? 'border-l' : ''
+                    }`}
                   >
                     <div className="w-14 h-14 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full bg-[#F5F4EF] flex items-center justify-center mb-3 sm:mb-4 md:mb-6">
                       <img src={iconSrc} alt={item.title} className="w-6 h-6 sm:w-8 sm:h-8 md:w-12 md:h-12 object-contain" />
