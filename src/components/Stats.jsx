@@ -73,23 +73,23 @@ export default function Stats() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="grid grid-cols-2 gap-y-10 gap-x-8 md:gap-y-16 md:gap-x-20 lg:gap-x-24 pt-8 w-full max-w-8xl text-center"
+            className="grid grid-cols-2 gap-y-10 gap-x-6 sm:gap-x-12 md:gap-y-14 md:gap-x-16 lg:gap-x-20 pt-8 w-full max-w-2xl sm:max-w-3xl md:max-w-4xl mx-auto text-center"
           >
             <div className="flex flex-col items-center">
-              <h3 className="text-3xl md:text-4xl lg:text-6xl font-normal text-brand-green mb-2 md:mb-3">7 Acre</h3>
-              <p className="text-sm md:text-lg lg:text-2xl text-brand-green font-semibold">Gated Community</p>
+              <h3 className="text-3xl md:text-4xl lg:text-5xl font-normal text-brand-green mb-2 md:mb-3">7 Acre</h3>
+              <p className="text-sm md:text-base lg:text-xl text-brand-green font-semibold">Gated Community</p>
             </div>
             <div className="flex flex-col items-center">
-              <h3 className="text-3xl md:text-4xl lg:text-6xl font-normal text-brand-green mb-2 md:mb-3">4 Towers</h3>
-              <p className="text-sm md:text-lg lg:text-2xl text-brand-green font-semibold">G + 31 Floors</p>
+              <h3 className="text-3xl md:text-4xl lg:text-5xl font-normal text-brand-green mb-2 md:mb-3">4 Towers</h3>
+              <p className="text-sm md:text-base lg:text-xl text-brand-green font-semibold">G + 31 Floors</p>
             </div>
             <div className="flex flex-col items-center">
-              <h3 className="text-3xl md:text-4xl lg:text-6xl font-normal text-brand-green mb-2 md:mb-3">2, 2.5 &amp; 3</h3>
-              <p className="text-sm md:text-lg lg:text-2xl text-brand-green font-semibold">BHK Residences</p>
+              <h3 className="text-3xl md:text-4xl lg:text-5xl font-normal text-brand-green mb-2 md:mb-3">2, 2.5 &amp; 3</h3>
+              <p className="text-sm md:text-base lg:text-xl text-brand-green font-semibold">BHK Residences</p>
             </div>
             <div className="flex flex-col items-center">
-              <h3 className="text-3xl md:text-4xl lg:text-6xl font-normal text-brand-green mb-2 md:mb-3">1388-2515 <span className="text-xl md:text-2xl lg:text-3xl">Sq.ft</span></h3>
-              <p className="text-sm md:text-lg lg:text-2xl text-brand-green font-semibold">Thoughtfully planned homes</p>
+              <h3 className="text-3xl md:text-4xl lg:text-5xl font-normal text-brand-green mb-2 md:mb-3">1388-2515 <span className="text-lg md:text-xl lg:text-2xl">Sq.ft</span></h3>
+              <p className="text-sm md:text-base lg:text-xl text-brand-green font-semibold">Thoughtfully planned homes</p>
             </div>
           </motion.div>
 
