@@ -56,13 +56,13 @@ export default function ContactSection() {
 
   return (
     <div className="w-full bg-white text-gray-800">
-      
+
       {/* CALLBACK FORM & CONTACT / MAP SECTION */}
       <section className="py-16 md:py-24 px-6 sm:px-10 md:px-16 lg:px-20 max-w-[1600px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-stretch">
-          
+
           {/* Left Column: Request Callback Form */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -86,21 +86,21 @@ export default function ContactSection() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs font-semibold text-gray-600 mb-1">First Name *</label>
-                    <input 
-                      type="text" 
-                      required 
+                    <input
+                      type="text"
+                      required
                       value={formData.firstName}
-                      onChange={(e) => setFormData({...formData, firstName: e.target.value})}
+                      onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
                       className="w-full px-4 py-3 rounded-lg bg-white border border-gray-300 focus:border-brand-green focus:outline-none text-sm text-gray-800"
                       placeholder="John"
                     />
                   </div>
                   <div>
                     <label className="block text-xs font-semibold text-gray-600 mb-1">Last Name</label>
-                    <input 
-                      type="text" 
+                    <input
+                      type="text"
                       value={formData.lastName}
-                      onChange={(e) => setFormData({...formData, lastName: e.target.value})}
+                      onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
                       className="w-full px-4 py-3 rounded-lg bg-white border border-gray-300 focus:border-brand-green focus:outline-none text-sm text-gray-800"
                       placeholder="Doe"
                     />
@@ -110,22 +110,22 @@ export default function ContactSection() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs font-semibold text-gray-600 mb-1">E-mail *</label>
-                    <input 
-                      type="email" 
-                      required 
+                    <input
+                      type="email"
+                      required
                       value={formData.email}
-                      onChange={(e) => setFormData({...formData, email: e.target.value})}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       className="w-full px-4 py-3 rounded-lg bg-white border border-gray-300 focus:border-brand-green focus:outline-none text-sm text-gray-800"
                       placeholder="john@example.com"
                     />
                   </div>
                   <div>
                     <label className="block text-xs font-semibold text-gray-600 mb-1">Phone *</label>
-                    <input 
-                      type="tel" 
-                      required 
+                    <input
+                      type="tel"
+                      required
                       value={formData.phone}
-                      onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       className="w-full px-4 py-3 rounded-lg bg-white border border-gray-300 focus:border-brand-green focus:outline-none text-sm text-gray-800"
                       placeholder="+91 98765 43210"
                     />
@@ -134,11 +134,11 @@ export default function ContactSection() {
 
                 <div>
                   <label className="block text-xs font-semibold text-gray-600 mb-1">Message *</label>
-                  <textarea 
+                  <textarea
                     rows={4}
                     required
                     value={formData.message}
-                    onChange={(e) => setFormData({...formData, message: e.target.value})}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     className="w-full px-4 py-3 rounded-lg bg-white border border-gray-300 focus:border-brand-green focus:outline-none text-sm text-gray-800 resize-none"
                     placeholder="Tell us about your requirements..."
                   ></textarea>
@@ -155,7 +155,7 @@ export default function ContactSection() {
           </motion.div>
 
           {/* Right Column: Address & Satellite Map */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -198,8 +198,8 @@ export default function ContactSection() {
       </section>
 
       {/* FREQUENTLY ASKED QUESTIONS SECTION */}
-      <section className="py-12 md:py-20 px-6 sm:px-10 md:px-16 lg:px-20 max-w-[1400px] mx-auto border-t border-gray-100">
-        
+      <section className="py-12 md:py-20 px-6 sm:px-10 md:px-16 lg:px-20 max-w-[1400px] mx-auto border-t border-gray-100 lg:pb-48">
+
         {/* Title (No Subheading) */}
         <div className="text-center mb-10 md:mb-14">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif italic font-normal text-brand-green">
@@ -212,7 +212,7 @@ export default function ContactSection() {
           {faqs.map((faq) => {
             const isOpen = openFaq === faq.id;
             return (
-              <div 
+              <div
                 key={faq.id}
                 className="border border-gray-200 rounded-xl bg-white overflow-hidden transition-all duration-200 shadow-xs"
               >
