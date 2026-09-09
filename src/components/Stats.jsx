@@ -1,6 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { motion, useInView } from 'framer-motion';
-import vanamVideo from '../assets/videos/vanam-compressed.mp4';
 
 export default function Stats() {
   const containerRef = useRef(null);
@@ -124,7 +123,7 @@ export default function Stats() {
         >
           <video
             ref={videoRef}
-            src={vanamVideo}
+            src="/vanam-compressed.mp4"
             loop
             muted
             playsInline
