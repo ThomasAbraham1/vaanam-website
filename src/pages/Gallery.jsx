@@ -23,7 +23,6 @@ import img016 from '../assets/gallery/016.webp';
 import new1 from '../assets/gallery/magnific_upscale_1l7qzOEr4r.webp';
 import new2 from '../assets/gallery/magnific_upscale_Tdtb85QVNR.webp';
 import new3 from '../assets/gallery/magnific_upscale_fH1YndFCDY.webp';
-import new4 from '../assets/gallery/magnific_upscale_s7416OCl8e.webp';
 
 export default function Gallery() {
   return (
@@ -164,7 +163,6 @@ export default function Gallery() {
          <img src={new1} alt="New Space 1" className="w-full max-h-[85vh] object-cover block" />
          <img src={new2} alt="New Space 2" className="w-full max-h-[85vh] object-cover block" />
          <img src={new3} alt="New Space 3" className="w-full max-h-[85vh] object-cover block" />
-         <img src={new4} alt="New Space 4" className="w-full max-h-[85vh] object-cover block" />
        </motion.div>
     </div>
   );
