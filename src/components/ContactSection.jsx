@@ -6,32 +6,27 @@ const faqs = [
   {
     id: 1,
     question: "Where is Profound Vanam located?",
-    answer: "Profound Vanam is located in Pragathi Nagar, near Exit Kaman, Bachupally, Hyderabad, Telangana — providing seamless connectivity to HITECH City, Outer Ring Road (ORR), and major commercial hubs."
+    answer: "Profound Vanam is located in Bachupally, Hyderabad. The area is well connected to Miyapur, Kukatpally, and the major IT hubs of West Hyderabad."
   },
   {
     id: 2,
     question: "What configurations are available in Profound Vanam?",
-    answer: "Profound Vanam offers thoughtfully planned 2, 2.5 & 3 BHK luxury residences ranging from 1388 to 2515 Sq.ft across 4 majestic towers with G+31 floors."
+    answer: "Profound Vanam offers well-planned residential units designed for comfortable family living, with spacious layouts, good ventilation, and Vastu-friendly options."
   },
   {
     id: 3,
     question: "What makes the Bachupally location attractive for homebuyers?",
-    answer: "Bachupally combines rapid infrastructure growth with calm green surroundings. It provides quick access to top schools, university campuses, multispecialty hospitals, and major IT corridors."
+    answer: "Bachupally has become one of the fastest-growing residential areas in West Hyderabad, with excellent connectivity, reputed schools, hospitals, and easy access to the IT corridor."
   },
   {
     id: 4,
     question: "Are schools and colleges available near Profound Vanam?",
-    answer: "Yes, prominent educational institutions including Silver Oaks International School, Delhi Public School (DPS), Oakridge, and VNR VJIET are located within a short drive."
+    answer: "Yes, many reputed institutions such as Oakridge International School, Delhi Public School, and VNR Vignan Jyothi Engineering College are located within a short driving distance."
   },
   {
     id: 5,
     question: "How far is Profound Vanam from major IT hubs?",
-    answer: "It is approximately 20 to 25 minutes from HITECH City, Gachibowli, and the Financial District via the Outer Ring Road and main arterial roads."
-  },
-  {
-    id: 6,
-    question: "What amenities can residents expect at Profound Vanam?",
-    answer: "Residents enjoy 14+ curated lifestyle amenities including 2 grand clubhouses, outdoor gym, swimming pool, pet zone, skating rink, sports courts, and a central community lawn."
+    answer: "The project offers convenient access to major employment hubs like Hitech City, Gachibowli, and Financial District, making it ideal for working professionals."
   }
 ];
 

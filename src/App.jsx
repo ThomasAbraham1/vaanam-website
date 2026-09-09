@@ -4,7 +4,6 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
-import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 
 function App() {
@@ -18,7 +17,6 @@ function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-        <ContactSection />
       </main>
 
       <Footer />
