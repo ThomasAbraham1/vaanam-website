@@ -22,8 +22,9 @@ export default function Home() {
       <ImageTextSection 
         customTitle={
           <h2 className="text-2xl md:text-3xl lg:text-5xl font-serif italic font-normal mb-4 md:mb-6 leading-tight tracking-wide">
-            <span className="text-brand-green">The care </span>
-            <span className="text-brand-orange">ecosystem </span>
+            <span className="text-brand-green">The </span>
+            <span className="text-brand-orange">care ecosystem </span>
+            <br />
             <span className="text-brand-green">planned into the ground</span>
           </h2>
         }
