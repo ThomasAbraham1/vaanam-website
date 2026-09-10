@@ -67,19 +67,19 @@ export default function Gallery() {
          transition={{ duration: 0.8 }}
          className="w-full max-w-[1920px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4 pb-0"
        >
-         <div className="h-[60vw] md:h-auto">
-           <img src={img002} alt="Balcony relaxation" className="w-full h-full object-cover block" />
+         <div className="w-full">
+           <img src={img002} alt="Balcony relaxation" className="w-full aspect-[4/5] sm:aspect-square md:aspect-auto md:h-full object-cover block" />
          </div>
-         <div className="flex flex-col gap-2 md:gap-4 h-[60vw] md:h-auto">
-           <img src={img003} alt="Kitchen" className="w-full h-1/2 object-cover block" />
-           <img src={img004} alt="Bedroom" className="w-full h-1/2 object-cover block" />
+         <div className="flex flex-col gap-2 md:gap-4 md:h-full">
+           <img src={img003} alt="Kitchen" className="w-full flex-1 aspect-[4/3] sm:aspect-square md:aspect-auto object-cover block" />
+           <img src={img004} alt="Bedroom" className="w-full flex-1 aspect-[4/3] sm:aspect-square md:aspect-auto object-cover block" />
          </div>
          <div className="md:col-span-2 w-full">
            <img 
              src={img005} 
              alt="Balcony Sunset" 
-             className="w-full max-h-[60vw] md:max-h-[85vh] object-cover block" 
-             style={{ objectPosition: 'center 42%' }}
+             className="w-full aspect-[4/5] sm:aspect-square md:aspect-auto md:max-h-[85vh] object-cover block" 
+             style={{ objectPosition: 'center 27%' }}
            />
          </div>
        </motion.div>
@@ -103,18 +103,18 @@ export default function Gallery() {
          transition={{ duration: 0.8 }}
          className="w-full max-w-[1920px] mx-auto flex flex-col gap-2 md:gap-4"
        >
-         <img src={img006} alt="Round Clubhouse" className="w-full max-h-[60vw] md:max-h-[85vh] object-cover block" />
-         <img src={img007} alt="Rectangular Clubhouse" className="w-full max-h-[60vw] md:max-h-[85vh] object-cover block" />
+         <img src={img006} alt="Round Clubhouse" className="w-full aspect-[4/3] sm:aspect-video md:aspect-auto md:max-h-[85vh] object-cover block" />
+         <img src={img007} alt="Rectangular Clubhouse" className="w-full aspect-[4/3] sm:aspect-video md:aspect-auto md:max-h-[85vh] object-cover block" />
          
          {/* 4-Image Asymmetrical Grid — 2-col on mobile, 5-col on desktop */}
          <div className="w-full grid grid-cols-2 md:grid-cols-5 gap-2 md:gap-4">
-           <img src={img008} alt="Salon" className="w-full h-[40vw] md:h-full object-cover md:col-span-3" />
-           <img src={img009} alt="Kids Area" className="w-full h-[40vw] md:h-full object-cover md:col-span-2" />
-           <img src={img011} alt="Cinema" className="w-full h-[40vw] md:h-full object-cover md:col-span-2" />
-           <img src={img010} alt="Dining" className="w-full h-[40vw] md:h-full object-cover md:col-span-3" />
+           <img src={img008} alt="Salon" className="w-full aspect-square md:aspect-auto md:h-full object-cover md:col-span-3" />
+           <img src={img009} alt="Kids Area" className="w-full aspect-square md:aspect-auto md:h-full object-cover md:col-span-2" />
+           <img src={img011} alt="Cinema" className="w-full aspect-square md:aspect-auto md:h-full object-cover md:col-span-2" />
+           <img src={img010} alt="Dining" className="w-full aspect-square md:aspect-auto md:h-full object-cover md:col-span-3" />
          </div>
 
-         <img src={img012} alt="Coworking space" className="w-full max-h-[60vw] md:max-h-[85vh] object-cover block" />
+         <img src={img012} alt="Coworking space" className="w-full aspect-[4/3] sm:aspect-video md:aspect-auto md:max-h-[85vh] object-cover block" />
        </motion.div>
 
        {/* Text 3 */}
@@ -136,15 +136,15 @@ export default function Gallery() {
          transition={{ duration: 0.8 }}
          className="w-full max-w-[1920px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4 pb-0"
        >
-         <div className="h-[60vw] md:h-auto">
-           <img src={img013} alt="Baby on grass" className="w-full h-full object-cover block" />
+         <div className="w-full">
+           <img src={img013} alt="Baby on grass" className="w-full aspect-[4/5] sm:aspect-square md:aspect-auto md:h-full object-cover block" />
          </div>
-         <div className="flex flex-col gap-2 md:gap-4 h-[60vw] md:h-auto">
-           <img src={img014} alt="Outdoor Stage" className="w-full h-1/2 object-cover block" />
-           <img src={img015} alt="Kids slide" className="w-full h-1/2 object-cover block" />
+         <div className="flex flex-col gap-2 md:gap-4 md:h-full">
+           <img src={img014} alt="Outdoor Stage" className="w-full flex-1 aspect-[4/3] sm:aspect-square md:aspect-auto object-cover block" />
+           <img src={img015} alt="Kids slide" className="w-full flex-1 aspect-[4/3] sm:aspect-square md:aspect-auto object-cover block" />
          </div>
          <div className="md:col-span-2 w-full">
-           <img src={img016} alt="Dining area" className="w-full max-h-[60vw] md:max-h-[85vh] object-cover block" />
+           <img src={img016} alt="Dining area" className="w-full aspect-[4/5] sm:aspect-square md:aspect-auto md:max-h-[85vh] object-cover block" />
          </div>
        </motion.div>
 
