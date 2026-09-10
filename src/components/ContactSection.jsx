@@ -166,8 +166,11 @@ export default function ContactSection() {
             <div className="space-y-4">
               <div>
                 <h4 className="text-xs font-bold uppercase tracking-wider text-brand-green mb-1">Contact:</h4>
-                <a href="tel:+919342370007" className="text-lg font-semibold text-brand-orange hover:underline">
-                  +91 9342370007
+                <a href="tel:+919342370007" className="text-lg font-semibold text-brand-orange hover:underline block">
+                  +91 93423 70007
+                </a>
+                <a href="tel:+919502966999" className="text-lg font-semibold text-brand-orange hover:underline block">
+                  +91 9502966999
                 </a>
               </div>
 
