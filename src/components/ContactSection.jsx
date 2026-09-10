@@ -227,7 +227,7 @@ export default function ContactSection() {
             {/* Address Details */}
             <div className="space-y-4">
               <div>
-                <h4 className="text-xs font-bold uppercase tracking-wider text-brand-green mb-1">Contact:</h4>
+                <h4 className="text-sm font-bold uppercase tracking-wider text-brand-green mb-2">Contact:</h4>
                 <a href="tel:+919342370007" className="text-lg font-semibold text-brand-orange hover:underline block">
                   +91 93423 70007
                 </a>
@@ -237,9 +237,9 @@ export default function ContactSection() {
               </div>
 
               <div>
-                <h4 className="text-xs font-bold uppercase tracking-wider text-brand-green mb-1">Project Address:</h4>
-                <div className="text-sm text-gray-700 leading-relaxed font-normal">
-                  <p className="font-semibold text-brand-green">PROFOUND VANAM</p>
+                <h4 className="text-sm font-bold uppercase tracking-wider text-brand-green mb-2">Project Address:</h4>
+                <div className="text-lg text-gray-700 leading-relaxed font-normal">
+                  <p className="text-brand-green uppercase">Profound Vanam</p>
                   <p>Pragathi Nagar</p>
                   <p>Near Exit Kaman, Telangana</p>
                 </div>
