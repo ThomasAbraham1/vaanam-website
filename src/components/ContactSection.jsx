@@ -58,7 +58,7 @@ export default function ContactSection() {
     <div className="w-full bg-white text-gray-800">
 
       {/* CALLBACK FORM & CONTACT / MAP SECTION */}
-      <section className="py-16 md:py-24 px-6 sm:px-10 md:px-16 lg:px-20 max-w-[1600px] mx-auto">
+      <section className="pt-4 md:pt-8 pb-16 md:pb-24 px-6 sm:px-10 md:px-16 lg:px-20 max-w-[1600px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-stretch">
 
           {/* Left Column: Request Callback Form */}
