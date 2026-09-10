@@ -33,6 +33,8 @@ const faqs = [
 export default function ContactSection() {
   const [openFaq, setOpenFaq] = useState(null);
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState('');
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -45,13 +47,56 @@ export default function ContactSection() {
     setOpenFaq(openFaq === id ? null : id);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
+    setSending(true);
+    setError('');
+
+    const fullName = [formData.firstName, formData.lastName].filter(Boolean).join(' ');
+
+    try {
+      const res = await fetch('https://api.resend.com/emails', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${import.meta.env.VITE_RESEND_API_KEY}`,
+        },
+        body: JSON.stringify({
+          from: 'Profound Vanam <onboarding@resend.dev>',
+          to: ['Crm@profoundgroup.in'],
+          subject: `New Callback Request from ${fullName}`,
+          html: `
+            <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;border:1px solid #e0e0e0;border-radius:8px;overflow:hidden;">
+              <div style="background:#073E27;padding:24px 32px;">
+                <h1 style="color:#C79657;margin:0;font-size:20px;">New Contact Request</h1>
+                <p style="color:rgba(255,255,255,0.7);margin:4px 0 0;font-size:13px;">Profound Vanam Website</p>
+              </div>
+              <div style="padding:32px;background:#fff;">
+                <table style="width:100%;border-collapse:collapse;font-size:14px;">
+                  <tr><td style="padding:10px 0;border-bottom:1px solid #f0f0f0;color:#888;width:120px;font-weight:600;text-transform:uppercase;font-size:11px;">Name</td><td style="padding:10px 0;border-bottom:1px solid #f0f0f0;color:#1a1a1a;font-weight:500;">${fullName}</td></tr>
+                  <tr><td style="padding:10px 0;border-bottom:1px solid #f0f0f0;color:#888;font-weight:600;text-transform:uppercase;font-size:11px;">Phone</td><td style="padding:10px 0;border-bottom:1px solid #f0f0f0;color:#1a1a1a;font-weight:500;">${formData.phone}</td></tr>
+                  ${formData.email ? `<tr><td style="padding:10px 0;border-bottom:1px solid #f0f0f0;color:#888;font-weight:600;text-transform:uppercase;font-size:11px;">Email</td><td style="padding:10px 0;border-bottom:1px solid #f0f0f0;color:#1a1a1a;font-weight:500;">${formData.email}</td></tr>` : ''}
+                  ${formData.message ? `<tr><td style="padding:10px 0;color:#888;font-weight:600;text-transform:uppercase;font-size:11px;vertical-align:top;">Message</td><td style="padding:10px 0;color:#1a1a1a;">${formData.message}</td></tr>` : ''}
+                </table>
+              </div>
+              <div style="background:#f8f8f8;padding:16px 32px;text-align:center;">
+                <p style="color:#aaa;font-size:12px;margin:0;">Submitted via profoundvanam.in</p>
+              </div>
+            </div>
+          `,
+        }),
+      });
+
+      if (!res.ok) throw new Error('Failed to send');
+
+      setSubmitted(true);
       setFormData({ firstName: '', lastName: '', email: '', phone: '', message: '' });
-    }, 4000);
+      setTimeout(() => setSubmitted(false), 5000);
+    } catch {
+      setError('Something went wrong. Please try calling us directly.');
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -144,11 +189,28 @@ export default function ContactSection() {
                   ></textarea>
                 </div>
 
+                {error && (
+                  <p className="text-sm text-red-600 font-medium">{error}</p>
+                )}
+
                 <button
                   type="submit"
-                  className="w-full py-3.5 px-6 rounded-xl bg-brand-green hover:bg-brand-orange text-white font-semibold text-sm tracking-wider uppercase transition-colors duration-300 shadow-md flex items-center justify-center gap-2 cursor-pointer"
+                  disabled={sending}
+                  className="w-full py-3.5 px-6 rounded-xl bg-brand-green hover:bg-brand-orange text-white font-semibold text-sm tracking-wider uppercase transition-colors duration-300 shadow-md flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  <Send size={16} /> Submit Request
+                  {sending ? (
+                    <>
+                      <svg className="animate-spin w-4 h-4" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"/>
+                      </svg>
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      <Send size={16} /> Submit Request
+                    </>
+                  )}
                 </button>
               </form>
             )}

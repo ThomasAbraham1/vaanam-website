@@ -30,7 +30,7 @@ export default function Footer() {
               <img
                 src={adityaBirlaLogo}
                 alt="Aditya Birla Group"
-                className="h-9 md:h-11 w-auto object-contain"
+                className="h-12 md:h-14 w-auto object-contain"
               />
             </div>
           </div>
