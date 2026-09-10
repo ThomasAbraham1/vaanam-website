@@ -75,7 +75,7 @@ export default function Gallery() {
            <img src={img004} alt="Bedroom" className="w-full h-1/2 object-cover block" />
          </div>
          <div className="md:col-span-2 w-full">
-           <img src={img005} alt="Balcony Sunset" className="w-full max-h-[60vw] md:max-h-[85vh] object-cover block" />
+           <img src={img005} alt="Balcony Sunset" className="w-full max-h-[60vw] md:max-h-[85vh] object-cover object-top block" />
          </div>
        </motion.div>
 
