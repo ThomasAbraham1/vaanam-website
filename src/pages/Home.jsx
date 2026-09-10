@@ -44,8 +44,12 @@ export default function Home() {
 
       {/* Text 1 */}
       <ImageTextSection 
-        titlePart1="The Forest"
-        titlePart2="beside you."
+        customTitle={
+          <h2 className="text-2xl md:text-3xl lg:text-5xl font-serif italic font-normal mb-4 md:mb-6 leading-tight tracking-wide">
+            <span className="text-brand-orange mr-2 sm:mr-3">The Forest</span>
+            <span className="text-brand-green">beside you</span>
+          </h2>
+        }
         description="Care begins with the world around you.&#10;At VANAM, the relationship with nature extends beyond a view.&#10;It brings a sense of openness, calm, and distance from the&#10;intensity of the city."
       />
 
