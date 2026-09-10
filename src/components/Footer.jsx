@@ -35,40 +35,8 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Column 2: Project Address */}
+          {/* Column 2: Get in Touch & CTA */}
           <div className="flex flex-col justify-start md:px-10 lg:px-16 md:border-r md:border-white/20">
-            <h3 className="text-xl md:text-2xl font-serif text-white font-normal mb-6 tracking-wide">
-              Project Address
-            </h3>
-
-            <div className="flex items-start gap-3.5 mb-6">
-              <MapPin className="w-5 h-5 text-brand-orange flex-shrink-0 mt-1" />
-              <div className="text-sm md:text-base text-white/85 leading-relaxed font-light">
-                <p className="font-semibold text-white tracking-wide">PROFOUND VANAM</p>
-                <p>Pragathi Nagar</p>
-                <p>Near Exit Kaman,</p>
-                <p>Telangana</p>
-              </div>
-            </div>
-
-            <div className="mt-auto pt-2">
-              <a 
-                href="https://maps.google.com/?q=Profound+Vanam+Pragathi+Nagar+Bachupally+Hyderabad"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm text-brand-orange hover:text-white transition-colors group"
-              >
-                <Map className="w-4 h-4 text-brand-orange group-hover:text-white transition-colors" />
-                <span className="underline underline-offset-4 decoration-brand-orange/60 group-hover:decoration-white font-medium">
-                  View on Google Maps
-                </span>
-                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-              </a>
-            </div>
-          </div>
-
-          {/* Column 3: Get in Touch & CTA */}
-          <div className="flex flex-col justify-start md:pl-10 lg:pl-16">
             <h3 className="text-xl md:text-2xl font-serif text-white font-normal mb-6 tracking-wide">
               Get in Touch
             </h3>
@@ -116,6 +84,38 @@ export default function Footer() {
                 <span>Explore Now</span>
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </Link>
+            </div>
+          </div>
+
+          {/* Column 3: Project Address */}
+          <div className="flex flex-col justify-start md:pl-10 lg:pl-16">
+            <h3 className="text-xl md:text-2xl font-serif text-white font-normal mb-6 tracking-wide">
+              Project Address
+            </h3>
+
+            <div className="flex items-start gap-3.5 mb-6">
+              <MapPin className="w-5 h-5 text-brand-orange flex-shrink-0 mt-1" />
+              <div className="text-sm md:text-base text-white/85 leading-relaxed font-light">
+                <p className="font-semibold text-white tracking-wide">PROFOUND VANAM</p>
+                <p>Pragathi Nagar</p>
+                <p>Near Exit Kaman,</p>
+                <p>Telangana</p>
+              </div>
+            </div>
+
+            <div className="mt-auto pt-2">
+              <a 
+                href="https://maps.google.com/?q=Profound+Vanam+Pragathi+Nagar+Bachupally+Hyderabad"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm text-brand-orange hover:text-white transition-colors group"
+              >
+                <Map className="w-4 h-4 text-brand-orange group-hover:text-white transition-colors" />
+                <span className="underline underline-offset-4 decoration-brand-orange/60 group-hover:decoration-white font-medium">
+                  View on Google Maps
+                </span>
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </a>
             </div>
           </div>
 
