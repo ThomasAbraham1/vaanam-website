@@ -26,11 +26,11 @@ export default function Footer() {
                 Thoughtfully designed homes surrounded by comfort, connectivity and calm.
               </p>
             </div>
-            <div className="mt-auto pt-6">
+            <div className="pt-6 self-start">
               <img
                 src={adityaBirlaLogo}
                 alt="Aditya Birla Group"
-                className="h-12 md:h-14 w-auto object-contain"
+                className="h-24 md:h-24 w-auto object-contain object-left"
               />
             </div>
           </div>
