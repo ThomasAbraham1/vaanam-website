@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, Map, Phone, Clock, ArrowRight } from 'lucide-react';
 import logoImg from '../assets/images/Logo.webp';
+import adityaBirlaLogo from '../assets/images/aditya-birla-logo.png';
 
 export default function Footer() {
   return (
@@ -11,18 +12,22 @@ export default function Footer() {
         {/* Top 3-Column Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-0 items-stretch">
           
-          {/* Column 1: Logo & Brand Statement */}
-          <div className="flex flex-col justify-start md:pr-10 lg:pr-16 md:border-r md:border-white/20">
-            <Link to="/" className="inline-block mb-6">
+          {/* Column 1: Logos */}
+          <div className="flex flex-col justify-between md:pr-10 lg:pr-16 md:border-r md:border-white/20">
+            <Link to="/" className="inline-block">
               <img 
                 src={logoImg} 
                 alt="Profound Vanam Logo" 
                 className="h-12 md:h-14 w-auto object-contain" 
               />
             </Link>
-            <p className="text-white/80 text-sm md:text-base leading-relaxed font-light max-w-sm">
-              Thoughtfully designed homes surrounded by comfort, connectivity and calm.
-            </p>
+            <div className="mt-auto pt-4">
+              <img
+                src={adityaBirlaLogo}
+                alt="Aditya Birla Group"
+                className="h-10 md:h-12 w-auto object-contain brightness-0 invert"
+              />
+            </div>
           </div>
 
           {/* Column 2: Project Address */}
