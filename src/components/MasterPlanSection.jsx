@@ -1,5 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ZoomIn, X, ExternalLink } from 'lucide-react';
 import masterPlanImg from '../assets/images/Master-Plan-Numbered.webp';
 
 const legends = [
@@ -33,6 +34,32 @@ const legends = [
 ];
 
 export default function MasterPlanSection() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Split legends into 2 columns for natural vertical descending order (01-14 in Col 1, 15-27 in Col 2)
+  const midpoint = Math.ceil(legends.length / 2);
+  const col1 = legends.slice(0, midpoint);
+  const col2 = legends.slice(midpoint);
+
+  // Handle ESC key to close modal & lock body scroll
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') setIsModalOpen(false);
+    };
+
+    if (isModalOpen) {
+      document.body.style.overflow = 'hidden';
+      window.addEventListener('keydown', handleKeyDown);
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    return () => {
+      document.body.style.overflow = 'unset';
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isModalOpen]);
+
   return (
     <section className="bg-white py-12 md:py-20 lg:pt-48 lg:pb-0 w-full text-gray-800">
       <div className="max-w-[1600px] mx-auto px-6 sm:px-10 md:px-16 lg:px-20">
@@ -72,17 +99,34 @@ export default function MasterPlanSection() {
                 LEGENDS:
               </h3>
               
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-1.5">
-                {legends.map((item) => (
-                  <div key={item.num} className="text-[11px] sm:text-xs text-gray-700 tracking-wide flex items-center">
-                    <span className="font-bold text-brand-green mr-1.5 w-6 flex-shrink-0">
-                      {item.num}.
-                    </span>
-                    <span className="uppercase text-gray-600 font-medium">
-                      {item.name}
-                    </span>
-                  </div>
-                ))}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-1.5 sm:gap-y-0">
+                {/* Column 1: 01 to 14 */}
+                <div className="space-y-1.5">
+                  {col1.map((item) => (
+                    <div key={item.num} className="text-[11px] sm:text-xs text-gray-700 tracking-wide flex items-center">
+                      <span className="font-bold text-brand-green mr-1.5 w-6 flex-shrink-0">
+                        {item.num}.
+                      </span>
+                      <span className="uppercase text-gray-600 font-medium">
+                        {item.name}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Column 2: 15 to 27 */}
+                <div className="space-y-1.5">
+                  {col2.map((item) => (
+                    <div key={item.num} className="text-[11px] sm:text-xs text-gray-700 tracking-wide flex items-center">
+                      <span className="font-bold text-brand-green mr-1.5 w-6 flex-shrink-0">
+                        {item.num}.
+                      </span>
+                      <span className="uppercase text-gray-600 font-medium">
+                        {item.name}
+                      </span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
 
@@ -96,18 +140,83 @@ export default function MasterPlanSection() {
             transition={{ duration: 0.9, delay: 0.2 }}
             className="lg:col-span-7 flex justify-center items-center"
           >
-            <div className="relative w-full max-w-3xl mx-auto flex justify-center">
+            <div 
+              onClick={() => setIsModalOpen(true)}
+              className="relative w-full max-w-3xl mx-auto flex justify-center cursor-zoom-in group rounded-2xl overflow-hidden"
+              role="button"
+              tabIndex={0}
+              aria-label="Click to enlarge Master Plan"
+              onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') setIsModalOpen(true); }}
+            >
               <img 
                 src={masterPlanImg} 
                 alt="Vanam Master Plan with numbered amenities and towers" 
-                className="w-full h-auto max-h-[85vh] lg:max-h-[92vh] object-contain block drop-shadow-sm" 
+                className="w-full h-auto max-h-[85vh] lg:max-h-[92vh] object-contain block drop-shadow-sm transition-transform duration-500 group-hover:scale-[1.02]" 
               />
+
+              {/* Hover Badge */}
+              <div className="absolute bottom-4 right-4 bg-brand-green/90 backdrop-blur-md text-white text-xs font-medium px-3.5 py-2 rounded-full shadow-lg flex items-center gap-1.5 opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-y-0 translate-y-1">
+                <ZoomIn className="w-3.5 h-3.5" />
+                <span>Click to expand</span>
+              </div>
             </div>
           </motion.div>
 
         </div>
 
       </div>
+
+      {/* LIGHTBOX MODAL */}
+      <AnimatePresence>
+        {isModalOpen && (
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25 }}
+            onClick={() => setIsModalOpen(false)}
+            className="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 md:p-10"
+          >
+            {/* Action Buttons Top Right */}
+            <div className="absolute top-4 right-4 sm:top-6 sm:right-6 z-10 flex items-center gap-3" onClick={(e) => e.stopPropagation()}>
+              <a 
+                href={masterPlanImg} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors duration-200 backdrop-blur-md flex items-center gap-1.5 text-xs font-medium px-3"
+                title="Open raw image in new tab"
+              >
+                <ExternalLink className="w-4 h-4" />
+                <span className="hidden sm:inline">Open original</span>
+              </a>
+
+              <button
+                onClick={() => setIsModalOpen(false)}
+                className="p-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors duration-200 backdrop-blur-md"
+                aria-label="Close fullscreen view"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            {/* Expanded Image Container */}
+            <motion.div 
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+              onClick={(e) => e.stopPropagation()}
+              className="relative max-w-[95vw] max-h-[92vh] flex items-center justify-center"
+            >
+              <img 
+                src={masterPlanImg} 
+                alt="Vanam Master Plan Full Size" 
+                className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl" 
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
