@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, Map, Phone, Clock, ArrowRight } from 'lucide-react';
 import logoImg from '../assets/images/Logo.webp';
-import adityaBirlaLogo from '../assets/images/aditya-birla-logo.png';
+import adityaBirlaLogo from '../assets/images/aditya-birla-logo.webp';
 
 export default function Footer() {
   return (
@@ -12,20 +12,25 @@ export default function Footer() {
         {/* Top 3-Column Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-0 items-stretch">
           
-          {/* Column 1: Logos */}
+          {/* Column 1: Logos & tagline */}
           <div className="flex flex-col justify-between md:pr-10 lg:pr-16 md:border-r md:border-white/20">
-            <Link to="/" className="inline-block">
-              <img 
-                src={logoImg} 
-                alt="Profound Vanam Logo" 
-                className="h-12 md:h-14 w-auto object-contain" 
-              />
-            </Link>
-            <div className="mt-auto pt-4">
+            <div>
+              <Link to="/" className="inline-block mb-4">
+                <img 
+                  src={logoImg} 
+                  alt="Profound Vanam Logo" 
+                  className="h-14 md:h-16 w-auto object-contain" 
+                />
+              </Link>
+              <p className="text-white/80 text-sm md:text-base leading-relaxed font-light max-w-sm">
+                Thoughtfully designed homes surrounded by comfort, connectivity and calm.
+              </p>
+            </div>
+            <div className="mt-auto pt-6">
               <img
                 src={adityaBirlaLogo}
                 alt="Aditya Birla Group"
-                className="h-10 md:h-12 w-auto object-contain brightness-0 invert"
+                className="h-9 md:h-11 w-auto object-contain"
               />
             </div>
           </div>
