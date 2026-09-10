@@ -13,7 +13,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-0 items-stretch">
           
           {/* Column 1: Logos & tagline */}
-          <div className="flex flex-col justify-between md:pr-10 lg:pr-16 md:border-r md:border-white/20">
+          <div className="flex flex-col justify-between items-start md:pr-10 lg:pr-16 md:border-r md:border-white/20">
             <div>
               <Link to="/" className="inline-block mb-4">
                 <img 
