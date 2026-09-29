@@ -63,7 +63,7 @@ export default function ContactSection() {
         },
         body: JSON.stringify({
           access_key: 'b92cb1ea-09db-4338-996d-2a1a3b1fd6d1',
-          subject: `New Callback Request from ${fullName}`,
+          subject: `Contact form submission`,
           name: fullName,
           phone: formData.phone,
           email: formData.email,
