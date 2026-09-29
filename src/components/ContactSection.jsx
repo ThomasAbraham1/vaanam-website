@@ -55,39 +55,25 @@ export default function ContactSection() {
     const fullName = [formData.firstName, formData.lastName].filter(Boolean).join(' ');
 
     try {
-      const res = await fetch('https://api.resend.com/emails', {
+      const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${import.meta.env.VITE_RESEND_API_KEY}`,
+          'Accept': 'application/json'
         },
         body: JSON.stringify({
-          from: 'Profound Vanam <onboarding@resend.dev>',
-          to: ['Crm@profoundgroup.in'],
+          access_key: 'b92cb1ea-09db-4338-996d-2a1a3b1fd6d1',
           subject: `New Callback Request from ${fullName}`,
-          html: `
-            <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;border:1px solid #e0e0e0;border-radius:8px;overflow:hidden;">
-              <div style="background:#073E27;padding:24px 32px;">
-                <h1 style="color:#C79657;margin:0;font-size:20px;">New Contact Request</h1>
-                <p style="color:rgba(255,255,255,0.7);margin:4px 0 0;font-size:13px;">Profound Vanam Website</p>
-              </div>
-              <div style="padding:32px;background:#fff;">
-                <table style="width:100%;border-collapse:collapse;font-size:14px;">
-                  <tr><td style="padding:10px 0;border-bottom:1px solid #f0f0f0;color:#888;width:120px;font-weight:600;text-transform:uppercase;font-size:11px;">Name</td><td style="padding:10px 0;border-bottom:1px solid #f0f0f0;color:#1a1a1a;font-weight:500;">${fullName}</td></tr>
-                  <tr><td style="padding:10px 0;border-bottom:1px solid #f0f0f0;color:#888;font-weight:600;text-transform:uppercase;font-size:11px;">Phone</td><td style="padding:10px 0;border-bottom:1px solid #f0f0f0;color:#1a1a1a;font-weight:500;">${formData.phone}</td></tr>
-                  ${formData.email ? `<tr><td style="padding:10px 0;border-bottom:1px solid #f0f0f0;color:#888;font-weight:600;text-transform:uppercase;font-size:11px;">Email</td><td style="padding:10px 0;border-bottom:1px solid #f0f0f0;color:#1a1a1a;font-weight:500;">${formData.email}</td></tr>` : ''}
-                  ${formData.message ? `<tr><td style="padding:10px 0;color:#888;font-weight:600;text-transform:uppercase;font-size:11px;vertical-align:top;">Message</td><td style="padding:10px 0;color:#1a1a1a;">${formData.message}</td></tr>` : ''}
-                </table>
-              </div>
-              <div style="background:#f8f8f8;padding:16px 32px;text-align:center;">
-                <p style="color:#aaa;font-size:12px;margin:0;">Submitted via profoundvanam.in</p>
-              </div>
-            </div>
-          `,
+          name: fullName,
+          phone: formData.phone,
+          email: formData.email,
+          message: formData.message || 'No message provided'
         }),
       });
 
-      if (!res.ok) throw new Error('Failed to send');
+      const result = await res.json();
+
+      if (!result.success) throw new Error(result.message || 'Failed to send');
 
       setSubmitted(true);
       setFormData({ firstName: '', lastName: '', email: '', phone: '', message: '' });
